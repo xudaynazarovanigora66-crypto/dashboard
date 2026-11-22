@@ -1,0 +1,80 @@
+.design {
+  background: #ffffff;
+
+  border-radius: 16px;
+  opacity: 1;
+  padding: 30px 50px 30px 50px;
+  box-shadow: 0 20px 40px rgba(20, 94, 118, 0.08);
+}
+.web {
+  width: 273px;
+  min-height: 251px;
+  padding: 10px 150px 10px 150px;
+  opacity: 1;
+
+  background: #08546c;
+  border-radius: 16px;
+
+  box-shadow: 0 20px 40px rgba(20, 94, 118, 0.08);
+}
+
+.design-web {
+  display: flex;
+  justify-content: center;
+}
+.create {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 25.6px;
+  letter-spacing: 0%;
+  color: #696969;
+  width: 213px;
+}
+.creative {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 25.6px;
+  letter-spacing: 0%;
+  color: #696969;
+  width: 213px;
+  position: absolute;
+  left: 500px;
+
+  top: 1710px;
+}
+.computer {
+  margin-bottom: 28px;
+}
+.cofe {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 24px;
+
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #d7d7d7;
+  position: absolute;
+  left: 500px;
+
+  top: 1670px;
+}
+.cafe {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 24px;
+
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #0f1221;
+  margin-bottom: 10px;
+}
+.his {
+  position: absolute;
+  left: 500px;
+  width: 40px;
+  height: 40px;
+}

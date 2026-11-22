@@ -1,0 +1,215 @@
+.team-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.team-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Sarlavha */
+.team-header {
+  text-align: center;
+  margin-bottom: clamp(25px, 4vw, 40px);
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 32px);
+  color: #282739;
+  text-transform: uppercase;
+}
+
+/* Yuqori qismdagi 2 ta ma'lumot bloklari */
+.team-info-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 45px;
+}
+
+.info-box-item {
+  background-color: #ffffff;
+  border: 1px solid #eaebf0;
+  border-radius: 16px;
+  padding: clamp(20px, 3vw, 30px);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.info-box-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background-color: #f4f7fb;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-box-icon img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.info-box-text {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #5d6375;
+  line-height: 1.5;
+}
+
+/* Jamoa a'zolari uchun Grid va Slider */
+.team-slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  width: 100%;
+}
+
+.team-card {
+  background-color: #ffffff;
+  border: 1px solid #eaebf0;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+}
+
+.team-img-box {
+  width: 100%;
+  height: 310px;
+  background-color: #f4f7fb;
+}
+
+.team-img {
+  max-width: 1000px;
+  object-fit: cover;
+}
+
+.team-member-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.member-name {
+  font-weight: 700;
+  font-size: clamp(14px, 1.7vw, 17px);
+  color: #282739;
+}
+
+.member-role {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: #8f93a0;
+  line-height: 1.4;
+}
+
+/* Slider strelka tugmasi */
+.team-next-btn {
+  position: absolute;
+ left: 950px;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  background-color: #6f73ee;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(111, 115, 238, 0.35);
+  z-index: 3;
+  transition: background-color 0.2s;
+}
+
+.team-next-btn:hover {
+  background-color: #5b5fd8;
+}
+
+.next-arrow {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+
+@media (max-width: 1024px) {
+  .team-info-boxes {
+    grid-template-columns: 1fr;
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-next-btn {
+    display: none;
+  }
+}
+
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .team-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+
+  .team-title {
+    font-size: 14px !important;
+  }
+
+  .info-box-item {
+    padding: 10px !important;
+    gap: 10px !important;
+  }
+
+  .info-box-text,
+  .member-role {
+    font-size: 10px !important;
+  }
+
+  .team-img-box {
+    height: 180px !important;
+  }
+
+  .team-member-info {
+    padding: 10px !important;
+  }
+
+  .member-name {
+    font-size: 12px !important;
+  }
+}

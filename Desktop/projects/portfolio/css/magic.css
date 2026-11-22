@@ -1,0 +1,82 @@
+.magic-1 {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 45px;
+
+  line-height: 56.25px;
+  letter-spacing: 0%;
+
+  color: #08546c;
+  position: absolute;
+  top: 2100px;
+  left: 550px;
+}
+
+.magic-2 {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+
+  line-height: 28.8px;
+  letter-spacing: 0%;
+  text-align: center;
+  position: absolute;
+  top: 2160px;
+  left: 500px;
+  color: #757575;
+}
+.magic-4 {
+  display: flex;
+  justify-content: center;
+  gap: 140px;
+}
+.magic-25 {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 25.6px;
+  letter-spacing: 0%;
+  color: #08546c;
+  margin-bottom: 10px;
+}
+.magic-23 {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 25.6px;
+  letter-spacing: 0%;
+  color: #757575;
+  margin-bottom: 20px;
+}
+
+.magic-60 {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 18px;
+
+  line-height: 25.6px;
+  letter-spacing: 0%;
+  color: #08546c;
+  margin-bottom: 70px;
+}
+.magic-50 {
+  display: flex;
+}
+.magic-67 {
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 70px;
+}
+.magic-69 {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 18px;
+
+  line-height: 25.6px;
+  letter-spacing: 0%;
+  color: #ffa800;
+  margin-bottom: 70px;
+}
+.magic-70 {
+  margin-bottom: 40px;
+}

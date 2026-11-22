@@ -1,0 +1,74 @@
+.lang-btn {
+  font-family: Schoolbell;
+  font-weight: 400;
+  font-size: 24px;
+
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  position: absolute;
+  border-radius: 30px;
+  border: none;
+  background: #094556;
+  left: 270px;
+}
+
+#lang-hd {
+  background-color: #265a6a;
+  padding: 200px 100px 690px 100px;
+}
+.lang-h1 {
+  position: absolute;
+  top: 400px;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 54px;
+
+  line-height: 80px;
+  letter-spacing: 0%;
+  left: 270px;
+  color: #ffffff;
+}
+.lang-p {
+  position: absolute;
+  top: 650px;
+  left: 270px;
+  color: #849499;
+  font-family: Inter;
+  font-weight: 400;
+
+  line-height: 28.8px;
+  letter-spacing: 0%;
+}
+.hire {
+  color: #ffffff;
+  background: #ffa63a;
+  padding: 15px 35px 15px 35px;
+  position: absolute;
+  top: 750px;
+  border: none;
+  border-radius: 25px;
+  left: 270px;
+}
+.work {
+  position: absolute;
+  top: 760px;
+  left: 420px;
+  color: #b6cdd4;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 16px;
+
+  line-height: 28.8px;
+  letter-spacing: 0%;
+}
+.lang-kid {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.image {
+  position: absolute;
+  width: 500px;
+  top: 200px;
+}

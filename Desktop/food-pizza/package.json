@@ -1,0 +1,12 @@
+{
+  "name": "pizza-house",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "build:css": "sass styles/scss/pizza.scss styles/pizza.css --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
+}

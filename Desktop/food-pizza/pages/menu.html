@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menyu — Pizza House</title>
+  <link rel="stylesheet" href="/styles/pizza.css">
+  <script src="/js/app.js" defer></script>
+  <script src="/js/menu.js" defer></script>
+</head>
+<body data-page="menu">
+  <div data-include="/partials/header.html"></div>
+  <main>
+    <section class="page-hero menu-page-hero">
+      <div class="container page-hero-content">
+        <p class="eyebrow" data-i18n="menu.eyebrow">Bugungi menyu</p>
+        <h1 data-i18n="menu.heading">Nima iste’d qilasiz?</h1>
+        <p data-i18n="menu.intro">Pitsa tanlang, buyurtmaga qo‘shing va yanada mazali lahzani yoqtirib qolin.</p>
+      </div>
+    </section>
+    <section class="container section-space">
+      <div class="menu-filter" role="group" aria-label="Menyu filtrlari">
+        <button type="button" class="is-active" data-menu-filter="all" data-i18n="menu.filterAll">Hammasi</button>
+        <button type="button" data-menu-filter="pizza" data-i18n="menu.filterPizza">Pitsalar</button>
+        <button type="button" data-menu-filter="classic" data-i18n="menu.filterClassic">Klassik</button>
+      </div>
+      <div class="new-product-grid" data-menu-list></div>
+    </section>
+  </main>
+  <div data-include="/partials/footer.html"></div>
+</body>
+</html>

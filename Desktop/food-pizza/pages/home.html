@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pizza House — yangi va mazali pitsalar.">
+  <title data-i18n="home.title">Pizza House — mazali pitsa</title>
+  <link rel="stylesheet" href="/styles/pizza.css">
+  <script src="/js/app.js" defer></script>
+  <script src="/js/home.js" defer></script>
+</head>
+<body data-page="home">
+  <div data-include="/partials/header.html"></div>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="home.eyebrow">Yangi pishirilgan. Mehr bilan.</p>
+          <h1 data-i18n="home.heading">Har bir bo‘lakda <span>baxt</span> bor.</h1>
+          <p class="hero-description" data-i18n="home.description">Sevimli masalliqlaringiz bilan tayyorlangan issiq pitsa — kuningizning eng mazali qismi.</p>
+          <a class="button button-primary" href="/pages/buy.html" data-i18n="home.cta">Pitsalarni ko‘rish <span aria-hidden="true">→</span></a>
+          <div class="hero-note"><span class="note-stars" aria-hidden="true">★★★★★</span><span data-i18n="home.rating">Har kuni yangi masalliqlar</span></div>
+        </div>
+        <div class="hero-art">
+          <span class="hero-orbit orbit-one"></span>
+          <span class="hero-orbit orbit-two"></span>
+          <span class="hero-badge" data-i18n="home.badge">Issiq va mazali!</span>
+          <img class="hero-pizza" src="/images/pizza1.webp" alt="Pepperoni pitsa" data-i18n-alt="home.pizzaAlt">
+          <span class="hero-spark spark-one" aria-hidden="true">✦</span>
+          <span class="hero-spark spark-two" aria-hidden="true">✳</span>
+        </div>
+      </div>
+    </section>
+    <section class="home-menu section-space">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow" data-i18n="home.favoriteEyebrow">Mijozlar tanlovi</p><h2 data-i18n="home.favoriteTitle">Sevimli pitsalar</h2></div>
+          <a class="text-link" href="/pages/buy.html" data-i18n="home.allMenu">Barcha menyu <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="home-feature-grid" data-home-products></div>
+      </div>
+    </section>
+    <section class="promo-strip">
+      <div class="container promo-inner">
+        <span class="promo-icon" aria-hidden="true">✦</span>
+        <p data-i18n="home.promo">Mazali pitsa uchun eng yaxshi vaqt — hozir!</p>
+        <a class="button button-light" href="/pages/buy.html" data-i18n="home.orderNow">Buyurtma berish</a>
+      </div>
+    </section>
+    <section class="container section-space page-picker">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="home.pagesEyebrow">Sayt bo‘limlari</p><h2 data-i18n="home.pagesTitle">Sahifalarni tanlang</h2></div>
+      </div>
+      <div class="page-picker-grid">
+        <a class="page-picker-card" href="/pages/home.html"><span>01</span><strong data-i18n="nav.home">Bosh sahifa</strong><i aria-hidden="true">→</i></a>
+        <a class="page-picker-card" href="/pages/about.html"><span>02</span><strong data-i18n="nav.about">Biz haqimizda</strong><i aria-hidden="true">→</i></a>
+        <a class="page-picker-card" href="/pages/pizza.html"><span>03</span><strong data-i18n="nav.pizza">Pitsalar</strong><i aria-hidden="true">→</i></a>
+        <a class="page-picker-card" href="/pages/menu.html"><span>04</span><strong data-i18n="nav.menu">Menyu</strong><i aria-hidden="true">→</i></a>
+        <a class="page-picker-card" href="/pages/buy.html"><span>05</span><strong data-i18n="nav.buy">Buyurtma</strong><i aria-hidden="true">→</i></a>
+        <a class="page-picker-card" href="/pages/delivery.html"><span>06</span><strong data-i18n="nav.delivery">Yetkazib berish</strong><i aria-hidden="true">→</i></a>
+        <a class="page-picker-card" href="/pages/contact.html"><span>07</span><strong data-i18n="nav.contact">Aloqa</strong><i aria-hidden="true">→</i></a>
+        <a class="page-picker-card" href="/pages/favorites.html"><span>08</span><strong data-i18n="nav.favorites">Sevimlilar</strong><i aria-hidden="true">→</i></a>
+      </div>
+    </section>
+  </main>
+  <div data-include="/partials/footer.html"></div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+.extended-faq-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.extended-faq-container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* Sarlavha qismi */
+.extended-faq-header {
+  text-align: center;
+  margin-bottom: clamp(30px, 4vw, 50px);
+}
+
+.extended-faq-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 30px);
+  color: #282739;
+  text-transform: uppercase;
+}
+
+/* Akkordeon elementlari */
+.extended-faq-accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eaebf0;
+  padding: clamp(16px, 2.2vw, 22px) 0;
+  transition: all 0.2s ease;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid #eaebf0;
+}
+
+/* Savol sarlavhasi (summary) */
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-weight: 600;
+  font-size: clamp(13px, 1.7vw, 16px);
+  color: #282739;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+/* Plyus/Krestik icon */
+.faq-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  background-color: #282739;
+  border-radius: 2px;
+  transition: transform 0.2s ease;
+}
+
+.faq-icon::before {
+  width: 16px;
+  height: 2px;
+}
+
+.faq-icon::after {
+  width: 2px;
+  height: 16px;
+}
+
+.faq-item[open] .faq-icon::after {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.faq-item[open] .faq-icon::before {
+  transform: rotate(45deg);
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* Javob matnlari */
+.faq-answer {
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-answer p {
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #5d6375;
+  line-height: 1.6;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+
+@media (max-width: 480px) {
+  .faq-question {
+    gap: 12px;
+  }
+}
+
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .extended-faq-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+
+  .extended-faq-title {
+    font-size: 14px !important;
+  }
+
+  .faq-item {
+    padding: 10px 0 !important;
+  }
+
+  .faq-question {
+    font-size: 11px !important;
+  }
+
+  .faq-answer p {
+    font-size: 10px !important;
+  }
+
+  .faq-icon {
+    width: 12px !important;
+    height: 12px !important;
+    min-width: 12px !important;
+  }
+
+  .faq-icon::before {
+    width: 12px !important;
+  }
+
+  .faq-icon::after {
+    height: 12px !important;
+  }
+}

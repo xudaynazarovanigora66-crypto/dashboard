@@ -1,0 +1,28 @@
+[
+  {
+    "id": "pepperoni",
+    "price": 69000,
+    "image": "/images/pizza1.webp",
+    "name": {
+      "uz": "Pepperoni",
+      "ru": "Пепперони"
+    },
+    "description": {
+      "uz": "Pepperoni, mozzarella, pomidor sousi",
+      "ru": "Пепперони, моцарелла, томатный соус"
+    }
+  },
+  {
+    "id": "classic",
+    "price": 59000,
+    "image": "/images/pizza2.webp",
+    "name": {
+      "uz": "Klassik pitsa",
+      "ru": "Классическая пицца"
+    },
+    "description": {
+      "uz": "Yangi masalliqlar va yumshoq mozzarella",
+      "ru": "Свежие ингредиенты и нежная моцарелла"
+    }
+  }
+]

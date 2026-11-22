@@ -1,0 +1,189 @@
+.service-addresses-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.service-addresses-wrapper {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* Sarlavha */
+.service-addresses-header {
+  text-align: center;
+  margin-bottom: clamp(25px, 4vw, 40px);
+}
+
+.service-addresses-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 32px);
+  color: #282739;
+  text-transform: uppercase;
+}
+
+/* Katta kulrang/och-ko'k fonli karta */
+.service-addresses-card {
+  background-color: #f4f7fb;
+  border-radius: 20px;
+  padding: clamp(30px, 5vw, 50px);
+  border: 1px solid #eaebf0;
+}
+
+/* 3 ustunli layout */
+.addresses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 4vw, 40px);
+}
+
+.address-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-title {
+  font-weight: 700;
+  font-size: clamp(16px, 2vw, 20px);
+  color: #282739;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+/* Qatorlar uslubi */
+.address-info-row,
+.phone-info-row,
+.note-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.info-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.street-address {
+  font-weight: 600;
+  font-size: clamp(13px, 1.5vw, 15px);
+  color: #282739;
+}
+
+.working-hours {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: #8f93a0;
+}
+
+.map-link {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: #6f73ee;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+}
+
+.phone-number {
+  font-weight: 700;
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: #282739;
+  text-decoration: none;
+}
+
+.phone-number:hover {
+  color: #6f73ee;
+}
+
+.note-info-row {
+  margin-top: 5px;
+}
+
+.note-text {
+  font-size: clamp(10px, 1.3vw, 12px);
+  color: #5d6375;
+  line-height: 1.4;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+
+@media (max-width: 992px) {
+  .addresses-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .service-addresses-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+
+  .service-addresses-card {
+    padding: 12px 8px !important;
+    border-radius: 10px;
+  }
+
+  .service-addresses-title {
+    font-size: 14px !important;
+  }
+
+  .city-title {
+    font-size: 13px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .street-address,
+  .phone-number {
+    font-size: 11px !important;
+  }
+
+  .working-hours,
+  .map-link,
+  .note-text {
+    font-size: 9px !important;
+  }
+
+  .address-info-row,
+  .phone-info-row,
+  .note-info-row {
+    margin-bottom: 10px !important;
+    gap: 6px !important;
+  }
+
+  .info-icon {
+    width: 14px !important;
+    height: 14px !important;
+    min-width: 14px !important;
+  }
+}

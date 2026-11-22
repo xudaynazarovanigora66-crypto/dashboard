@@ -1,0 +1,73 @@
+.hero-btn{
+  font-family: Jost;
+font-weight: 400;
+font-size: 14px;
+color: #FFFFFF;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+border: 1px solid #FFFFFF;
+border-radius: 5px;
+padding: 10px 15px;
+margin-bottom: 36px;
+background: none;
+}
+.hero{
+ background: radial-gradient(58.73% 541.94% at 75.14% 62.23%, #A6A9FF 0%, #6F73EE 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+}
+.hero-h3{
+font-family: Jost;
+font-weight: 600;
+font-size: 35px;
+color: #FFFFFF;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: uppercase;
+margin-bottom: 7px;
+}
+.hero-h5{
+  font-family: Jost;
+font-weight: 400;
+font-size: 20px;
+color: #FFFFFF;
+line-height: 100%;
+letter-spacing: 0%;
+margin-bottom: 25px;
+}
+.hero-btn1{
+  font-family: Jost;
+font-weight: 400;
+font-size: 16px;
+color: #6F73EE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+border-radius: 5px;
+padding: 18px 20px;
+border: none;
+margin-bottom: 46px;
+}
+.hero-span{
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #FFFFFF;
+}
+.hero-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.hero-img{
+  width: 100%;
+  max-width: 500px;
+}
+@media(max-width:500px){
+  .hero-text{
+    display: none;
+  }
+}
+

@@ -1,0 +1,147 @@
+.promo-cards-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(20px, 4vw, 40px) clamp(10px, 3vw, 30px);
+}
+
+.promo-cards-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(15px, 2.5vw, 30px);
+}
+
+/* Karta umumiy uslubi */
+.promo-card {
+  background-color: #f4f7fb; /* Och kulrang-binafsha fon */
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  min-height: 220px;
+}
+
+/* Karta matn qismi */
+.promo-card-content {
+  flex: 1;
+  padding: clamp(20px, 3vw, 35px);
+  z-index: 2;
+}
+
+.promo-title {
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw, 24px);
+  color: #282739;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.promo-desc {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 1.5vw, 15px);
+  color: #5d6375;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  max-width: 280px;
+}
+
+.promo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #6f73ee;
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: clamp(13px, 1.5vw, 15px);
+  transition: gap 0.2s ease;
+}
+
+.promo-link:hover {
+  gap: 12px;
+}
+
+.promo-link .arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Karta rasm qismi */
+.promo-card-visual {
+  flex: 1;
+  height: 100%;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.promo-img {
+  width: 100%;
+max-width: 220px;
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+
+@media (max-width: 768px) {
+  .promo-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .promo-card-visual {
+    width: 100%;
+    min-height: 160px;
+  }
+
+  .promo-desc {
+    max-width: 100%;
+  }
+}
+
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .promo-cards-section {
+    padding: 10px 5px !important;
+  }
+
+  .promo-card-content {
+    padding: 12px 10px !important;
+  }
+
+  .promo-title {
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .promo-desc {
+    font-size: 11px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .promo-link {
+    font-size: 11px !important;
+  }
+}

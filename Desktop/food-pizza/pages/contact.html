@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aloqa — Pizza House</title>
+  <link rel="stylesheet" href="/styles/pizza.css">
+  <script src="/js/app.js" defer></script>
+  <script src="/js/contact.js" defer></script>
+</head>
+<body data-page="contact">
+  <div data-include="/partials/header.html"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-content">
+        <p class="eyebrow" data-i18n="contact.eyebrow">Bog‘lanish</p>
+        <h1 data-i18n="contact.heading">Savolingiz bormi?</h1>
+        <p data-i18n="contact.intro">Taklif, savol yoki maxsus buyurtma haqida bemalol yozing.</p>
+      </div>
+    </section>
+    <section class="container section-space contact-layout">
+      <div class="contact-details">
+        <h2 data-i18n="contact.detailsTitle">Pizza House bilan bog‘laning</h2>
+        <p data-i18n="contact.detailsText">Javob berish vaqti odatda bir necha daqiqa.</p>
+        <div class="contact-detail-grid">
+          <article><span aria-hidden="true">☎</span><div><strong data-i18n="contact.phoneLabel">Telefon</strong><p>+998 90 123 45 67</p></div></article>
+          <article><span aria-hidden="true">✉</span><div><strong data-i18n="contact.emailLabel">Email</strong><p>hello@pizzahouse.uz</p></div></article>
+        </div>
+      </div>
+      <form class="contact-form" data-contact-form>
+        <label><span data-i18n="contact.name">Ismingiz</span><input name="name" autocomplete="name" maxlength="100" required></label>
+        <label><span data-i18n="contact.phone">Telefon raqamingiz</span><input name="phone" type="tel" maxlength="40" required></label>
+        <label><span data-i18n="contact.message">Xabar</span><textarea name="message" rows="5" maxlength="3000" required></textarea></label>
+        <button class="button button-primary" type="submit" data-i18n="contact.submit">Xabar yuborish</button>
+        <p class="order-status" data-contact-status role="status"></p>
+      </form>
+    </section>
+  </main>
+  <div data-include="/partials/footer.html"></div>
+</body>
+</html>

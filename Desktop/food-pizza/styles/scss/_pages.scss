@@ -1,0 +1,36 @@
+.hero { overflow: hidden; background: linear-gradient(115deg, #fffaf3 0%, #fff8f0 54%, #ffefe2 100%); }
+.hero-grid { min-height: 570px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 22px; }
+.hero-copy { position: relative; z-index: 1; padding-block: 70px; }
+.hero-copy h1 { max-width: 570px; margin-bottom: 20px; }
+.hero-copy h1 span { color: var(--orange); }
+.hero-description { max-width: 490px; margin-bottom: 27px; color: var(--muted); font-size: 1.08rem; }
+.hero-note { display: flex; align-items: center; gap: 10px; margin-top: 23px; color: var(--muted); font-size: .83rem; }
+.note-stars { color: #f0a52e; letter-spacing: .12em; }
+.hero-art { position: relative; min-height: 470px; display: grid; place-items: center; }
+.hero-orbit { position: absolute; border: 1px dashed rgba(232, 93, 37, .22); border-radius: 50%; }
+.orbit-one { width: min(410px, 85%); aspect-ratio: 1; }
+.orbit-two { width: min(340px, 72%); aspect-ratio: 1; }
+.hero-pizza { position: relative; z-index: 1; width: min(365px, 76%); aspect-ratio: 1; border: 10px solid rgba(255, 255, 255, .86); border-radius: 50%; object-fit: cover; box-shadow: 0 24px 65px rgba(83, 47, 21, .22); animation: pizza-spin 24s linear infinite; }
+.hero-badge { position: absolute; z-index: 2; top: 16%; right: 3%; padding: 12px 17px; border-radius: 99px; color: #fff; background: var(--orange); box-shadow: 0 10px 28px rgba(232, 93, 37, .28); font-size: .8rem; font-weight: 900; transform: rotate(7deg); }
+.hero-spark { position: absolute; color: #f0a52e; animation: sparkle 2.4s ease-in-out infinite; }
+.spark-one { top: 18%; left: 11%; font-size: 2.4rem; }
+.spark-two { right: 7%; bottom: 20%; color: var(--orange); font-size: 2.8rem; animation-delay: .6s; }
+.home-feature-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+@keyframes pizza-spin { to { transform: rotate(360deg); } }
+@keyframes sparkle { 0%, 100% { opacity: .45; transform: scale(.85) rotate(0); } 50% { opacity: 1; transform: scale(1.12) rotate(18deg); } }
+@media (max-width: 760px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 0; padding-bottom: 30px; }
+  .hero-copy { padding-block: 62px 0; }
+  .hero-art { min-height: 360px; }
+  .hero-pizza { width: min(290px, 70%); }
+  .hero-badge { top: 12%; right: 4%; }
+}
+@media (max-width: 540px) {
+  .hero-copy { padding-top: 48px; }
+  .hero-art { min-height: 300px; }
+  .hero-pizza { width: min(245px, 72%); border-width: 7px; }
+  .home-feature-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

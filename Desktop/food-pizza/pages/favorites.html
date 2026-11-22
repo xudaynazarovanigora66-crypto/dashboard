@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sevimlilar — Pizza House</title>
+  <link rel="stylesheet" href="/styles/pizza.css">
+  <script src="/js/app.js" defer></script>
+  <script src="/js/favorites.js" defer></script>
+</head>
+<body data-page="favorites">
+  <div data-include="/partials/header.html"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-content">
+        <p class="eyebrow" data-i18n="favorites.eyebrow">Sizning tanlovingiz</p>
+        <h1 data-i18n="favorites.heading">Sevimli pitsalar</h1>
+        <p data-i18n="favorites.intro">Eng ko‘p yoqtirilgan mazali pitsalar bir joyda.</p>
+      </div>
+    </section>
+    <section class="container section-space">
+      <div class="favorites-grid" data-favorites-list></div>
+    </section>
+  </main>
+  <div data-include="/partials/footer.html"></div>
+</body>
+</html>

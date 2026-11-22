@@ -1,0 +1,66 @@
+.god {
+  padding: 150px 200px 150px 200px;
+  background: #ffffff;
+}
+.god-1 {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  color: #757575;
+
+  line-height: 28px;
+  letter-spacing: 0%;
+  margin-bottom: 55px;
+}
+.god-2 {
+  display: flex;
+  gap: 10px;
+}
+.god-3 {
+  position: absolute;
+  top: 4900px;
+}
+.god-4 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 10px;
+  left: 670px;
+  top: 4900px;
+}
+.god-6 {
+  text-decoration: none;
+  color: #787878;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+
+  line-height: 28px;
+  letter-spacing: 0%;
+}
+.god-7 {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 24px;
+  color: #08546c;
+  margin-bottom: 15px;
+
+  line-height: 28px;
+  letter-spacing: 0%;
+}
+.god-5 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 10px;
+  left: 940px;
+  top: 4900px;
+}
+.god-8 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 10px;
+  left: 1140px;
+  top: 4900px;
+}

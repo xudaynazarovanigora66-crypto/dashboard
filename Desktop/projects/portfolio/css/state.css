@@ -1,0 +1,155 @@
+.state {
+  background-color: white;
+  padding: 130px 400px 130px 400px;
+  position: absolute;
+  top: 870px;
+  border-radius: 25px;
+  box-shadow: 0px 73px 80px 0px #0000000f;
+}
+.statis {
+  display: flex;
+  justify-content: center;
+}
+.state-h4 {
+  position: absolute;
+
+  top: 60px;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 20px;
+  color: #265a6a;
+
+  line-height: 22.4px;
+  letter-spacing: 0%;
+  left: 380px;
+}
+.state-c {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 40px;
+
+  line-height: 22.4px;
+  letter-spacing: 0%;
+  color: #08546c;
+  position: absolute;
+  top: 150px;
+  left: 50px;
+}
+.state-s {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  color: #08546c;
+
+  line-height: 22.4px;
+  letter-spacing: 0%;
+  position: absolute;
+  top: 180px;
+  left: 30px;
+}
+.state-a {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 40px;
+
+  line-height: 22.4px;
+  letter-spacing: 0%;
+  color: #08546c;
+  position: absolute;
+  top: 150px;
+  left: 300px;
+}
+.state-b {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  color: #08546c;
+
+  line-height: 22.4px;
+  letter-spacing: 0%;
+  position: absolute;
+  top: 180px;
+  left: 240px;
+}
+.state-d {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 40px;
+
+  line-height: 22.4px;
+  letter-spacing: 0%;
+  color: #08546c;
+  position: absolute;
+  top: 150px;
+  left: 500px;
+}
+.state-e {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  color: #08546c;
+
+  line-height: 22.4px;
+  letter-spacing: 0%;
+  position: absolute;
+  top: 180px;
+  left: 490px;
+}
+.state-f {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 40px;
+
+  line-height: 22.4px;
+  letter-spacing: 0%;
+  color: #08546c;
+  position: absolute;
+  top: 150px;
+  left: 670px;
+}
+.state-g {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  color: #08546c;
+
+  line-height: 22.4px;
+  letter-spacing: 0%;
+  position: absolute;
+  top: 180px;
+  left: 640px;
+}
+.service {
+  font-family: Schoolbell;
+  font-weight: 400;
+  font-size: 24px;
+
+  line-height: 22.4px;
+  letter-spacing: 0%;
+
+  text-decoration-thickness: 0%;
+  color: #265a6a;
+  position: absolute;
+  top: 1300px;
+  left: 730px;
+}
+.state-angel {
+  position: absolute;
+  z-index: 1;
+}
+.state-god {
+  background-color: white;
+  padding: 700px 500px 700px 500px;
+}
+.builder {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 38px;
+
+  line-height: 60px;
+  letter-spacing: 0%;
+  color: #08546c;
+  position: absolute;
+  top: 1330px;
+  left: 570px;
+}

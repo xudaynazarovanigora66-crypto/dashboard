@@ -1,0 +1,36 @@
+.sword {
+  background-color: #265a6a;
+  padding: 200px 400px 200px 300px;
+}
+.sword-pro {
+  display: flex;
+  gap: 32px;
+}
+.sword-2 {
+  width: 550px;
+  position: absolute;
+  top: 4300px;
+  color: #ffffff;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 16px;
+
+  line-height: 25.6px;
+  letter-spacing: 0%;
+}
+.sword-1 {
+  position: absolute;
+  top: 4250px;
+}
+.sword-5 {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  color: #aabfc6;
+
+  line-height: 25.6px;
+  letter-spacing: 0%;
+  width: 300px;
+  position: absolute;
+  top: 4470px;
+}

@@ -1,0 +1,189 @@
+.hydro-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.hydro-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(30px, 5vw, 60px);
+  flex-wrap: wrap;
+}
+
+/* Chap tomon vizual qism */
+.hydro-visual {
+  flex: 1.2;
+  min-width: 280px;
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background-color: #f4f7fb;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eaebf0;
+}
+
+.hydro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hydro-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(50px, 7vw, 75px);
+  height: clamp(50px, 7vw, 75px);
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.hydro-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-icon {
+  color: #6f73ee;
+  font-size: clamp(16px, 2.2vw, 24px);
+  margin-left: 3px;
+}
+
+/* O'ng tomon matn qismi */
+.hydro-content {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hydro-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 30px);
+  color: #282739;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.hydro-subtitle {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #5d6375;
+  margin-bottom: 20px;
+}
+
+.hydro-desc {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #5d6375;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hydro-features-title {
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #282739;
+  margin-bottom: 12px;
+}
+
+.hydro-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.hydro-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #5d6375;
+  line-height: 1.4;
+}
+
+.check-icon {
+  color: #6f73ee;
+  font-weight: 700;
+  font-size: 14px;
+  min-width: 16px;
+}
+
+.hydro-footer-link-text {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: #8f93a0;
+}
+
+.hydro-link {
+  color: #6f73ee;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hydro-link:hover {
+  text-decoration: underline;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+
+@media (max-width: 992px) {
+  .hydro-container {
+    flex-direction: column;
+  }
+  .hydro-visual,
+  .hydro-content {
+    width: 100%;
+  }
+}
+
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .hydro-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+
+  .hydro-title {
+    font-size: 14px !important;
+  }
+
+  .hydro-subtitle,
+  .hydro-desc,
+  .hydro-features-title,
+  .hydro-features-list li,
+  .hydro-footer-link-text {
+    font-size: 10px !important;
+  }
+
+  .hydro-play-btn {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .play-icon {
+    font-size: 12px !important;
+  }
+}

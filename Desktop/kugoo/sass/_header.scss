@@ -1,0 +1,401 @@
+.nav-ul{
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.nav-a{
+    font-family: Jost;
+font-weight: 400;
+font-size: 12px;
+color: #5D6C7B;
+line-height: 100%;
+letter-spacing: 0%;
+text-decoration: none;
+}
+.nav-div {
+display: flex;
+gap: 8.5px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nomer-a{
+    font-family: Jost;
+font-weight: 400;
+font-size: 12px;
+color: #282739;
+line-height: 100%;
+letter-spacing: 0%;
+text-decoration: none;
+}
+.nav-div1{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+.nav-img{
+    display: none;
+}
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px clamp(10px, 3vw, 30px);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(10px, 2vw, 25px);
+}
+
+/* Logo */
+.nav-logo {
+    font-family: Jost;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  min-width: 100px;
+  font-family: Jost;
+font-weight: 700;
+font-size: 30px;
+color: #282739;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: uppercase;
+
+}
+
+.nav-logo img {
+  max-height: 35px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Katalog tugmasi */
+.nav-catalog-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #6f73ee;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Jost', sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.nav-catalog-btn:hover {
+  background-color: #5b5fd8;
+}
+
+.catalog-icon img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Search input qismi */
+.nav-search-box {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #6f73ee;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.search-category {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f4f5f9;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: 'Jost', sans-serif;
+  color: #282739;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.arrow-down {
+  font-size: 10px;
+  color: #282739;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: 'Jost', sans-serif;
+  color: #282739;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: #8f93a0;
+  font-family: 'Jost', sans-serif;
+}
+
+.search-btn {
+  background-color: #6f73ee;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+/* O'ng tomondagi ikonkalarning qismi */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 24px);
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #282739;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Jost', sans-serif;
+}
+
+.action-item img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Jost', sans-serif;
+  overflow-wrap: break-word;
+}
+
+.top-nav {
+  width: 100%;
+  background-color: #f4f7fb; /* Och kulrang-ko'kimtir fon */
+  padding: 10px clamp(10px, 3vw, 30px);
+  border-bottom: 1px solid #e5e9f2;
+}
+
+.top-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(15px, 3vw, 35px);
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.top-nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.top-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #282739;
+  font-size: clamp(13px, 1.8vw, 15px);
+  font-weight: 400;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.top-nav-link:hover {
+  color: #6f73ee;
+}
+
+/* "Доступна рассрочка" binafsha nishoni (badge) */
+.badge-installment {
+  background-color: #6f73ee;
+  color: #ffffff;
+  font-size: clamp(10px, 1.4vw, 12px);
+  font-weight: 400;
+  padding: 3px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+/* "Акции %" doira nishoni */
+.badge-percent {
+  background-color: #6f73ee;
+  color: #ffffff;
+  font-size: clamp(10px, 1.4vw, 12px);
+  font-weight: 500;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Mobil va 200px gacha) */
+/* ========================================== */
+
+@media (max-width: 768px) {
+  .top-nav-list {
+    gap: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-nav {
+    padding: 8px 10px;
+  }
+  
+  .top-nav-list {
+    justify-content: flex-start;
+  }
+}
+
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .top-nav {
+    padding: 6px 4px !important;
+  }
+
+  .top-nav-list {
+    gap: 8px !important;
+  }
+
+  .top-nav-link {
+    font-size: 11px !important;
+    gap: 4px !important;
+  }
+
+  .badge-installment {
+    font-size: 9px !important;
+    padding: 2px 6px !important;
+  }
+
+  .badge-percent {
+    width: 14px !important;
+    height: 14px !important;
+    font-size: 9px !important;
+  }
+}
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+
+@media (max-width: 992px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+  .nav-search-box {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-category {
+    display: none;
+  }
+  .cart-text {
+    display: none;
+  }
+  .nav-catalog-btn span:not(.catalog-icon) {
+    display: none;
+  }
+  .nav-catalog-btn {
+    padding: 10px;
+  }
+}
+
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .navbar {
+    padding: 8px 4px !important;
+  }
+
+  .nav-container {
+    gap: 8px !important;
+  }
+
+  .search-input {
+    font-size: 11px !important;
+    padding: 6px !important;
+  }
+
+  .search-btn {
+    padding: 6px 10px !important;
+  }
+
+  .action-item img {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+@media(max-width:500px){
+    .nav-div1{
+        display: none;
+    }
+}
+@media(max-width:400px){
+   .nav-div{
+    display: none;
+   }
+   .nav-img{
+    display: block;
+   }
+}
+@media(max-width:300px){
+.nav-ul{
+    display: none;
+}
+}

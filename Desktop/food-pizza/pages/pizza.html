@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pitsalar — Pizza House</title>
+  <link rel="stylesheet" href="/styles/pizza.css">
+  <script src="/js/app.js" defer></script>
+  <script src="/js/pizza.js" defer></script>
+</head>
+<body data-page="pizza">
+  <div data-include="/partials/header.html"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-content">
+        <p class="eyebrow" data-i18n="pizza.eyebrow">Pizza House pitsalari</p>
+        <h1 data-i18n="pizza.heading">Mazali pitsalarni tanlang</h1>
+        <p data-i18n="pizza.intro">Har bir retsept yangi masalliqlar, quyuq sous va mukammal pech pishirish bilan tayyorlanadi.</p>
+      </div>
+    </section>
+    <section class="container section-space">
+      <div class="pizza-feature" data-pizza-feature></div>
+      <div class="section-heading pizza-section-heading">
+        <div><p class="eyebrow" data-i18n="pizza.allEyebrow">To‘liq assortiment</p><h2 data-i18n="pizza.allTitle">Barcha pitsalar</h2></div>
+      </div>
+      <div class="new-product-grid" data-pizza-list></div>
+    </section>
+  </main>
+  <div data-include="/partials/footer.html"></div>
+</body>
+</html>

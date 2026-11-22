@@ -1,0 +1,35 @@
+@import url("../css/god.css");
+@import url("../css/sword.css");
+@import url("../css/magic.css");
+@import url("../css/design-web.css");
+@import url("../css/state.css");
+@import url("../css/lang.css");
+@import url("../css/home.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* styles.css */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  padding: 20px 20px;
+  cursor: pointer;
+  display: none; /* Tugma dastlab yashirin bo'ladi */
+}
+
+.back-to-top:hover {
+  background-color: #edebeb;
+}
+
+html {
+  scroll-behavior: smooth;
+}

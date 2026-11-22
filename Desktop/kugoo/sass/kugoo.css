@@ -1,0 +1,5347 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #6b6362;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: none; /* Tugma dastlab yashirin bo'ladi */
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-a {
+  font-family: Jost;
+  font-weight: 400;
+  font-size: 12px;
+  color: #5D6C7B;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: none;
+}
+
+.nav-div {
+  display: flex;
+  gap: 8.5px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nomer-a {
+  font-family: Jost;
+  font-weight: 400;
+  font-size: 12px;
+  color: #282739;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: none;
+}
+
+.nav-div1 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.nav-img {
+  display: none;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px clamp(10px, 3vw, 30px);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(10px, 2vw, 25px);
+}
+
+/* Logo */
+.nav-logo {
+  font-family: Jost;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  min-width: 100px;
+  font-family: Jost;
+  font-weight: 700;
+  font-size: 30px;
+  color: #282739;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+.nav-logo img {
+  max-height: 35px;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/* Katalog tugmasi */
+.nav-catalog-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #6f73ee;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Jost", sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.nav-catalog-btn:hover {
+  background-color: #5b5fd8;
+}
+
+.catalog-icon img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Search input qismi */
+.nav-search-box {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #6f73ee;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.search-category {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f4f5f9;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: "Jost", sans-serif;
+  color: #282739;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.arrow-down {
+  font-size: 10px;
+  color: #282739;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: "Jost", sans-serif;
+  color: #282739;
+  width: 100%;
+}
+
+.search-input::-moz-placeholder {
+  color: #8f93a0;
+  font-family: "Jost", sans-serif;
+}
+
+.search-input::placeholder {
+  color: #8f93a0;
+  font-family: "Jost", sans-serif;
+}
+
+.search-btn {
+  background-color: #6f73ee;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+/* O'ng tomondagi ikonkalarning qismi */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 24px);
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #282739;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Jost", sans-serif;
+}
+
+.action-item img {
+  width: 22px;
+  height: 22px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  overflow-wrap: break-word;
+}
+
+.top-nav {
+  width: 100%;
+  background-color: #f4f7fb; /* Och kulrang-ko'kimtir fon */
+  padding: 10px clamp(10px, 3vw, 30px);
+  border-bottom: 1px solid #e5e9f2;
+}
+
+.top-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(15px, 3vw, 35px);
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.top-nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.top-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #282739;
+  font-size: clamp(13px, 1.8vw, 15px);
+  font-weight: 400;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.top-nav-link:hover {
+  color: #6f73ee;
+}
+
+/* "Доступна рассрочка" binafsha nishoni (badge) */
+.badge-installment {
+  background-color: #6f73ee;
+  color: #ffffff;
+  font-size: clamp(10px, 1.4vw, 12px);
+  font-weight: 400;
+  padding: 3px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+/* "Акции %" doira nishoni */
+.badge-percent {
+  background-color: #6f73ee;
+  color: #ffffff;
+  font-size: clamp(10px, 1.4vw, 12px);
+  font-weight: 500;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 768px) {
+  .top-nav-list {
+    gap: 12px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .top-nav {
+    padding: 8px 10px;
+  }
+  .top-nav-list {
+    justify-content: flex-start;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .top-nav {
+    padding: 6px 4px !important;
+  }
+  .top-nav-list {
+    gap: 8px !important;
+  }
+  .top-nav-link {
+    font-size: 11px !important;
+    gap: 4px !important;
+  }
+  .badge-installment {
+    font-size: 9px !important;
+    padding: 2px 6px !important;
+  }
+  .badge-percent {
+    width: 14px !important;
+    height: 14px !important;
+    font-size: 9px !important;
+  }
+}
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 992px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+  .nav-search-box {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .search-category {
+    display: none;
+  }
+  .cart-text {
+    display: none;
+  }
+  .nav-catalog-btn span:not(.catalog-icon) {
+    display: none;
+  }
+  .nav-catalog-btn {
+    padding: 10px;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .navbar {
+    padding: 8px 4px !important;
+  }
+  .nav-container {
+    gap: 8px !important;
+  }
+  .search-input {
+    font-size: 11px !important;
+    padding: 6px !important;
+  }
+  .search-btn {
+    padding: 6px 10px !important;
+  }
+  .action-item img {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+@media (max-width: 500px) {
+  .nav-div1 {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .nav-div {
+    display: none;
+  }
+  .nav-img {
+    display: block;
+  }
+}
+@media (max-width: 300px) {
+  .nav-ul {
+    display: none;
+  }
+}
+.hero-btn {
+  font-family: Jost;
+  font-weight: 400;
+  font-size: 14px;
+  color: #FFFFFF;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 36px;
+  background: none;
+}
+
+.hero {
+  background: radial-gradient(58.73% 541.94% at 75.14% 62.23%, #A6A9FF 0%, #6F73EE 100%);
+}
+
+.hero-h3 {
+  font-family: Jost;
+  font-weight: 600;
+  font-size: 35px;
+  color: #FFFFFF;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.hero-h5 {
+  font-family: Jost;
+  font-weight: 400;
+  font-size: 20px;
+  color: #FFFFFF;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 25px;
+}
+
+.hero-btn1 {
+  font-family: Jost;
+  font-weight: 400;
+  font-size: 16px;
+  color: #6F73EE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 18px 20px;
+  border: none;
+  margin-bottom: 46px;
+}
+
+.hero-span {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #FFFFFF;
+}
+
+.hero-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (max-width: 500px) {
+  .hero-text {
+    display: none;
+  }
+}
+.features-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(20px, 4vw, 40px) clamp(10px, 3vw, 30px);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.features-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(15px, 2.5vw, 30px);
+  flex-wrap: wrap;
+}
+
+/* Afzallik kartalari */
+.feature-card {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.feature-title {
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: clamp(16px, 2vw, 20px);
+  color: #282739;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.feature-desc {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 1.5vw, 15px);
+  color: #5d6375;
+  line-height: 1.3;
+}
+
+/* Yandex reyting bloki */
+.yandex-rating-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  border: 1px solid #eaebf0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  min-width: 190px;
+}
+
+.yandex-logo-box {
+  width: 62px;
+  height: 62px;
+  background-color: #ff3b00; /* Yandex qizil foni */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.yandex-logo-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.yandex-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.yandex-title {
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  color: #8f93a0;
+  font-weight: 400;
+}
+
+.yandex-stars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.star-icon {
+  color: #ffcc00;
+  font-size: 16px;
+}
+
+.rating-score {
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #282739;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 992px) {
+  .features-container {
+    gap: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .feature-card {
+    min-width: 100%;
+  }
+  .yandex-rating-card {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .features-section {
+    padding: 10px 5px !important;
+  }
+  .features-container {
+    gap: 12px !important;
+  }
+  .feature-title {
+    font-size: 14px !important;
+  }
+  .feature-desc {
+    font-size: 11px !important;
+  }
+  .yandex-rating-card {
+    padding: 6px 8px !important;
+  }
+  .yandex-logo-box {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .rating-score {
+    font-size: 14px !important;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  overflow-wrap: break-word;
+}
+
+.catalog-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 60px) clamp(10px, 3vw, 30px);
+}
+
+.catalog-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Header va Filtrlar */
+.catalog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.catalog-main-title {
+  font-weight: 700;
+  font-size: clamp(22px, 3.5vw, 32px);
+  color: #282739;
+}
+
+.catalog-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: #f4f5f9;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: clamp(13px, 1.5vw, 15px);
+  font-weight: 500;
+  color: #5d6375;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background-color: #6f73ee;
+  color: #ffffff;
+}
+
+/* Mahsulotlar Grid tizimi */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+/* Mahsulot kartasi */
+.product-card {
+  background: #ffffff;
+  border: 1px solid #eaebf0;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.product-top-badges {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.badge-hit {
+  background-color: #eb5757;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.badge-new {
+  background-color: #27ae60;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.badge-compare img {
+  width: 18px;
+  height: 18px;
+  opacity: 0.6;
+}
+
+.product-img-box {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.product-img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.slider-arrow {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #eaebf0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.slider-arrow.left {
+  left: 0;
+}
+
+.slider-arrow.right {
+  right: 0;
+}
+
+.product-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #282739;
+  margin-bottom: 12px;
+}
+
+/* Xarakteristikalar ro'yxati */
+.product-specs {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  margin-bottom: 20px;
+}
+
+.product-specs li {
+  font-size: 13px;
+  color: #8f93a0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Narxlar */
+.product-price-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.old-price {
+  font-size: 12px;
+  color: #8f93a0;
+  text-decoration: line-through;
+}
+
+.current-price {
+  font-weight: 700;
+  font-size: 20px;
+  color: #282739;
+}
+
+/* Harakat tugmalari */
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buy-btn {
+  flex: 1;
+  background-color: #6f73ee;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.buy-btn:hover {
+  background-color: #5b5fd8;
+}
+
+.icon-action-btn {
+  background-color: #f4f5f9;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.icon-action-btn:hover {
+  background-color: #eaebf0;
+}
+
+.icon-action-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+/* "Смотреть все" tugmasi */
+.catalog-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.view-all-btn {
+  display: inline-block;
+  background-color: transparent;
+  border: 1.5px solid #6f73ee;
+  color: #6f73ee;
+  padding: 12px 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.2s;
+}
+
+.view-all-btn:hover {
+  background-color: #6f73ee;
+  color: #ffffff;
+}
+
+.products-h3 {
+  font-family: Jost;
+  font-weight: 600;
+  font-size: 35px;
+  color: #282739;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 768px) {
+  .catalog-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .catalog-section {
+    padding: 10px 5px !important;
+    overflow: hidden;
+  }
+  .catalog-main-title {
+    font-size: 16px !important;
+  }
+  .filter-btn {
+    padding: 6px 10px !important;
+    font-size: 11px !important;
+  }
+  .product-card {
+    padding: 10px !important;
+  }
+  .product-specs {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .product-specs li {
+    font-size: 11px !important;
+  }
+  .current-price {
+    font-size: 16px !important;
+  }
+  .buy-btn {
+    font-size: 11px !important;
+    padding: 8px 4px !important;
+  }
+  .icon-action-btn {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+.promo-cards-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(20px, 4vw, 40px) clamp(10px, 3vw, 30px);
+}
+
+.promo-cards-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(15px, 2.5vw, 30px);
+}
+
+/* Karta umumiy uslubi */
+.promo-card {
+  background-color: #f4f7fb; /* Och kulrang-binafsha fon */
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  min-height: 220px;
+}
+
+/* Karta matn qismi */
+.promo-card-content {
+  flex: 1;
+  padding: clamp(20px, 3vw, 35px);
+  z-index: 2;
+}
+
+.promo-title {
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw, 24px);
+  color: #282739;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.promo-desc {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 1.5vw, 15px);
+  color: #5d6375;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  max-width: 280px;
+}
+
+.promo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #6f73ee;
+  text-decoration: none;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: clamp(13px, 1.5vw, 15px);
+  transition: gap 0.2s ease;
+}
+
+.promo-link:hover {
+  gap: 12px;
+}
+
+.promo-link .arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Karta rasm qismi */
+.promo-card-visual {
+  flex: 1;
+  height: 100%;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.promo-img {
+  width: 100%;
+  max-width: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right center;
+     object-position: right center;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 768px) {
+  .promo-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .promo-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .promo-card-visual {
+    width: 100%;
+    min-height: 160px;
+  }
+  .promo-desc {
+    max-width: 100%;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .promo-cards-section {
+    padding: 10px 5px !important;
+  }
+  .promo-card-content {
+    padding: 12px 10px !important;
+  }
+  .promo-title {
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+  }
+  .promo-desc {
+    font-size: 11px !important;
+    margin-bottom: 15px !important;
+  }
+  .promo-link {
+    font-size: 11px !important;
+  }
+}
+.dv-div {
+  background: radial-gradient(76.7% 707.77% at 23.3% 72.57%, #595959 0%, #3B3E46 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.dv-section {
+  display: flex;
+  justify-content: center;
+}
+
+.dv-btn {
+  font-family: Jost;
+  font-weight: 400;
+  font-size: 14px;
+  color: #FFFFFF;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  border: 1px solid #EE685F;
+  background: #EE685F;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 27px;
+}
+
+.dv-h2 {
+  font-family: Jost;
+  font-weight: 600;
+  font-size: 35px;
+  color: #FFFFFF;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  margin-bottom: 27px;
+}
+
+.dv-btn1 {
+  font-family: Jost;
+  font-weight: 400;
+  font-size: 16px;
+  background: Black;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  border-radius: 5px;
+  background: #FFFFFF;
+  border: none;
+  padding: 20px 30px;
+}
+
+.dv-img {
+  width: 100%;
+  max-width: 800px;
+}
+
+@media (max-width: 500px) {
+  .dv-section {
+    display: none;
+  }
+}
+.categories-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 60px) clamp(10px, 3vw, 30px);
+}
+
+.categories-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Sarlavha va Menejer bloki */
+.categories-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.categories-title {
+  font-weight: 700;
+  font-size: clamp(22px, 3.5vw, 32px);
+  color: #282739;
+}
+
+/* Menejer karta uslubi */
+.manager-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f4f7fb;
+  padding: 10px 16px;
+  border-radius: 12px;
+  max-width: 380px;
+}
+
+.manager-avatar {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  border-radius: 50%;
+  background-color: #e5e9f2;
+  overflow: hidden;
+}
+
+.manager-avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.manager-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.manager-text {
+  font-size: 12px;
+  color: #5d6375;
+  line-height: 1.3;
+}
+
+.manager-link {
+  font-size: 12px;
+  color: #6f73ee;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.manager-link:hover {
+  text-decoration: underline;
+}
+
+/* Kategoriyalar Grid */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+/* Kategoriya kartasi */
+.category-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 240px;
+  background-color: #f4f7fb;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.category-img-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.category-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Matn qismi uchun gradient fon (rasm ustida yaxshi ko'rinishi uchun) */
+.category-content {
+  position: absolute;
+  z-index: 2;
+  padding: 20px 40px;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  top: 140px;
+  left: 30px;
+}
+
+.category-content1 {
+  position: absolute;
+  z-index: 2;
+  padding: 20px 60px;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  top: 140px;
+  left: 30px;
+}
+
+.category-content2 {
+  position: absolute;
+  z-index: 2;
+  padding: 20px 90px;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  top: 140px;
+  left: 30px;
+}
+
+.category-name {
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.category-price {
+  font-weight: 400;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* "Смотреть все" tugmasi */
+.categories-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.view-all-btn {
+  display: inline-block;
+  background-color: transparent;
+  border: 1.5px solid #6f73ee;
+  color: #6f73ee;
+  padding: 12px 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.2s;
+}
+
+.view-all-btn:hover {
+  background-color: #6f73ee;
+  color: #ffffff;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 768px) {
+  .categories-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .manager-card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .categories-section {
+    padding: 10px 5px !important;
+    overflow: hidden;
+  }
+  .categories-title {
+    font-size: 16px !important;
+  }
+  .manager-card {
+    padding: 8px !important;
+    gap: 8px !important;
+  }
+  .manager-avatar {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+  }
+  .manager-text,
+  .manager-link {
+    font-size: 10px !important;
+  }
+  .category-card {
+    height: 180px !important;
+  }
+  .category-content {
+    padding: 12px !important;
+  }
+  .category-name {
+    font-size: 14px !important;
+  }
+  .category-price {
+    font-size: 11px !important;
+  }
+  .view-all-btn {
+    padding: 10px 20px !important;
+    font-size: 12px !important;
+  }
+}
+.about-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 60px) clamp(10px, 3vw, 30px);
+}
+
+.about-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: #f4f7fb; /* Och kulrang-binafsha fon */
+  border-radius: 20px;
+  padding: clamp(20px, 4vw, 50px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(20px, 4vw, 40px);
+  flex-wrap: wrap;
+}
+
+/* Chap tomon vizual rasm va overlay karta */
+.about-visual {
+  flex: 1;
+  min-width: 280px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 380px;
+  background-color: #e5e9f2;
+  display: flex;
+  align-items: flex-end;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* O'ng tomon matnlar va afzalliklar kartasi */
+.about-info {
+  flex: 1.2;
+  min-width: 280px;
+}
+
+.about-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 30px);
+  color: #282739;
+  line-height: 1.25;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.about-description {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #5d6375;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Afzalliklar oq kartasi */
+.about-features-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: clamp(15px, 3vw, 25px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.features-subtitle {
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #282739;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.features-list li {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #5d6375;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.bullet-arrow {
+  color: #eb5757; /* Qizil ko'rsatkich */
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+.certificate-link {
+  display: inline-block;
+  font-size: 12px;
+  color: #6f73ee;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.certificate-link:hover {
+  text-decoration: underline;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-visual,
+  .about-info {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .test-drive-card {
+    margin: 10px;
+    padding: 12px;
+    max-width: 100%;
+  }
+  .about-visual {
+    min-height: 300px;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .about-section {
+    padding: 5px !important;
+  }
+  .about-container {
+    padding: 10px 8px !important;
+    border-radius: 10px;
+  }
+  .about-title {
+    font-size: 15px !important;
+  }
+  .about-description,
+  .features-subtitle,
+  .features-list li {
+    font-size: 11px !important;
+  }
+  .about-features-card {
+    padding: 10px 8px !important;
+  }
+  .test-drive-title {
+    font-size: 13px !important;
+  }
+  .test-drive-desc {
+    font-size: 10px !important;
+  }
+  .test-drive-btn {
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+  }
+}
+.advantages-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.advantages-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Sarlavha qismi */
+.advantages-header {
+  text-align: center;
+  margin-bottom: clamp(30px, 4vw, 50px);
+}
+
+.advantages-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 30px);
+  color: #282739;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.advantages-subtitle {
+  font-size: clamp(14px, 1.8vw, 16px);
+  color: #5d6375;
+  margin-bottom: 30px;
+}
+
+/* Tab tugmalari */
+.advantages-tabs {
+  display: inline-flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab-btn {
+  background-color: #f4f7fb;
+  border: 1.5px solid transparent;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-family: "Jost", sans-serif;
+  font-size: clamp(13px, 1.6vw, 15px);
+  font-weight: 500;
+  color: #5d6375;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  border-color: #6f73ee;
+  background-color: #ffffff;
+  color: #6f73ee;
+}
+
+.tab-btn:hover {
+  border-color: #6f73ee;
+}
+
+/* Grid kartalari */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(15px, 2.5vw, 25px);
+}
+
+/* Karta umumiy uslubi */
+.advantage-card {
+  background-color: #ffffff;
+  border: 1px solid #eaebf0;
+  border-radius: 12px;
+  padding: clamp(20px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease;
+}
+
+.advantage-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+.advantage-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantage-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.advantage-title {
+  font-weight: 600;
+  font-size: clamp(16px, 1.8vw, 18px);
+  color: #282739;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.advantage-desc {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #8f93a0;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.advantage-link {
+  font-size: 13px;
+  color: #6f73ee;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.advantage-link:hover {
+  text-decoration: underline;
+}
+
+/* 6-Karta Promo Banner uslubi */
+.promo-banner-card {
+  background-color: #f4f7fb;
+  border: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 25px;
+}
+
+.promo-text-content {
+  flex: 1;
+  z-index: 2;
+}
+
+.promo-card-title {
+  font-weight: 600;
+  font-size: clamp(16px, 1.8vw, 18px);
+  color: #282739;
+  margin-bottom: 12px;
+}
+
+.promo-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #6f73ee;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.promo-card-link:hover {
+  gap: 10px;
+}
+
+.promo-card-visual {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.promo-card-img {
+  max-width: 140px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 992px) {
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+  .advantages-tabs {
+    width: 100%;
+  }
+  .tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 8px 12px;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .advantages-section {
+    padding: 10px 5px !important;
+    overflow: hidden;
+  }
+  .advantages-title {
+    font-size: 14px !important;
+  }
+  .advantages-subtitle {
+    font-size: 11px !important;
+    margin-bottom: 15px !important;
+  }
+  .advantage-card {
+    padding: 12px 10px !important;
+  }
+  .advantage-title {
+    font-size: 13px !important;
+  }
+  .advantage-desc {
+    font-size: 10px !important;
+  }
+  .tab-btn {
+    font-size: 11px !important;
+    padding: 6px 8px !important;
+  }
+}
+.video-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 60px) clamp(10px, 3vw, 30px);
+}
+
+.video-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Video o'rab turuvchi container */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background-color: #1a1a24;
+  aspect-ratio: 16/9; /* 16:9 standart video nisbati */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Video pleyer uslubi */
+.video-player {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: none;
+  outline: none;
+}
+
+/* Play tugmasi dizayni (agar maxsus play button ishlatmoqchi bo'lsangiz) */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(50px, 8vw, 80px);
+  height: clamp(50px, 8vw, 80px);
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  z-index: 2;
+}
+
+.play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background-color: #f4f5f9;
+}
+
+.play-icon {
+  color: #6f73ee;
+  font-size: clamp(18px, 3vw, 28px);
+  margin-left: 4px; /* Uchburchak markazlashishi uchun */
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 768px) {
+  .video-wrapper {
+    border-radius: 12px;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .video-section {
+    padding: 10px 5px !important;
+  }
+  .video-wrapper {
+    border-radius: 8px !important;
+  }
+  .play-btn {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  .play-icon {
+    font-size: 14px !important;
+  }
+}
+.reviews-gallery-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 60px) clamp(10px, 3vw, 30px);
+}
+
+/* Sarlavha qismi */
+.reviews-header {
+  text-align: center;
+  margin-bottom: clamp(25px, 4vw, 40px);
+}
+
+.reviews-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 28px);
+  color: #282739;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.reviews-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #6f73ee;
+  text-decoration: none;
+  font-size: clamp(13px, 1.6vw, 15px);
+  font-weight: 500;
+}
+
+.reviews-link:hover {
+  text-decoration: underline;
+}
+
+/* Galereya Grid tizimi - Har bir qatorda aniq 5 tadan karta joylashadi */
+.reviews-div {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.review-img {
+  width: 100%;
+  min-height: 200px;
+}
+
+/* Karta uslubi */
+.review-card {
+  background-color: #f4f7fb;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 240px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eaebf0;
+}
+
+/* Matnli sharh kartasi */
+.review-text-card {
+  background-color: #ffffff;
+  padding: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.review-user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #e5e9f2;
+  overflow: hidden;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: #282739;
+}
+
+.user-status {
+  font-size: 10px;
+  color: #8f93a0;
+}
+
+.review-stars {
+  color: #ffcc00;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.review-date {
+  color: #8f93a0;
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.review-text {
+  font-size: 11px;
+  color: #5d6375;
+  line-height: 1.35;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 1024px) {
+  .reviews-grid {
+    grid-template-columns: repeat(3, 1fr); /* Planshetda 3 tadan */
+  }
+}
+@media (max-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr); /* Kichik planshetda 2 tadan */
+    gap: 12px;
+  }
+  .review-card {
+    height: 190px;
+  }
+}
+@media (max-width: 480px) {
+  .reviews-grid {
+    grid-template-columns: 1fr; /* Telefonda 1 tadan */
+  }
+}
+@media (max-width: 1280px) {
+  .reviews-div {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .review-img {
+    max-width: 300px;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .reviews-gallery-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .reviews-title {
+    font-size: 14px !important;
+  }
+  .reviews-link {
+    font-size: 11px !important;
+  }
+  .review-card {
+    height: 150px !important;
+  }
+  .review-text-card {
+    padding: 10px !important;
+    height: auto !important;
+  }
+  .review-text {
+    font-size: 10px !important;
+  }
+}
+video-reviews-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 60px) clamp(10px, 3vw, 30px);
+}
+
+.video-reviews-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Sarlavha qismi */
+.video-reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: clamp(25px, 4vw, 40px);
+  flex-wrap: wrap;
+}
+
+.header-left {
+  max-width: 600px;
+}
+
+.video-reviews-title {
+  font-weight: 700;
+  font-size: clamp(22px, 3.5vw, 32px);
+  color: #282739;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.video-reviews-subtitle {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #8f93a0;
+  line-height: 1.5;
+}
+
+.view-all-videos-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #6f73ee;
+  text-decoration: none;
+  font-size: clamp(13px, 1.6vw, 15px);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.view-all-videos-link:hover {
+  text-decoration: underline;
+}
+
+/* Slider / Grid konteyneri */
+.video-reviews-slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.video-reviews-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 25px;
+  width: 100%;
+}
+
+/* Video karta uslubi */
+.video-review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.video-thumbnail-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: #f4f7fb;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eaebf0;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Play tugmasi uslubi */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(40px, 6vw, 55px);
+  height: clamp(40px, 6vw, 55px);
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.main-play-btn {
+  width: clamp(55px, 7vw, 75px);
+  height: clamp(55px, 7vw, 75px);
+}
+
+.play-icon {
+  color: #6f73ee;
+  font-size: clamp(14px, 2vw, 20px);
+  margin-left: 3px;
+}
+
+.video-card-title {
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 16px);
+  color: #282739;
+  line-height: 1.35;
+}
+
+/* Strelka (Slider Next Button) */
+.slider-next-btn {
+  position: absolute;
+  right: calc(33.33% - 20px);
+  top: 40%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background-color: #6f73ee;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(111, 115, 238, 0.35);
+  z-index: 3;
+  transition: background-color 0.2s;
+}
+
+.slider-next-btn:hover {
+  background-color: #5b5fd8;
+}
+
+.next-arrow {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 992px) {
+  .video-reviews-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .main-card {
+    grid-column: span 2;
+  }
+  .slider-next-btn {
+    right: -10px;
+  }
+}
+@media (max-width: 600px) {
+  .video-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-card {
+    grid-column: span 1;
+  }
+  .slider-next-btn {
+    display: none; /* Mobil qurilmalarda oddiy scroll uchun tugma berkitiladi */
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .video-reviews-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .video-reviews-title {
+    font-size: 14px !important;
+  }
+  .video-reviews-subtitle,
+  .view-all-videos-link {
+    font-size: 10px !important;
+  }
+  .video-card-title {
+    font-size: 11px !important;
+  }
+  .play-btn {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .play-icon {
+    font-size: 10px !important;
+  }
+}
+.blog-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 60px) clamp(10px, 3vw, 30px);
+}
+
+.blog-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Sarlavha qismi */
+.blog-header {
+  margin-bottom: clamp(25px, 4vw, 35px);
+}
+
+.blog-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 28px);
+  color: #282739;
+  text-transform: uppercase;
+}
+
+/* Slider va Grid qismi */
+.blog-slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  width: 100%;
+}
+
+/* Maqola kartasi */
+.blog-card {
+  background-color: #f4f7fb;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eaebf0;
+  transition: box-shadow 0.2s;
+}
+
+.blog-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.blog-img-box {
+  width: 100%;
+  height: 180px;
+  background-color: #e5e9f2;
+}
+
+.blog-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-card-title {
+  font-weight: 600;
+  font-size: clamp(15px, 1.7vw, 17px);
+  color: #282739;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.blog-card-desc {
+  font-size: clamp(12px, 1.4vw, 13px);
+  color: #5d6375;
+  line-height: 1.45;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+/* Sana va ko'rishlar soni */
+.blog-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #8f93a0;
+  border-top: 1px solid #eaebf0;
+  padding-top: 12px;
+}
+
+/* Strelka (Slider Next Button) */
+.blog-next-btn {
+  position: absolute;
+  right: -22px;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background-color: #6f73ee;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(111, 115, 238, 0.35);
+  z-index: 3;
+  transition: background-color 0.2s;
+}
+
+.blog-next-btn:hover {
+  background-color: #5b5fd8;
+}
+
+.next-arrow {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+  .blog-next-btn {
+    display: none;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .blog-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .blog-title {
+    font-size: 14px !important;
+  }
+  .blog-img-box {
+    height: 120px !important;
+  }
+  .blog-content {
+    padding: 10px !important;
+  }
+  .blog-card-title {
+    font-size: 13px !important;
+  }
+  .blog-card-desc {
+    font-size: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .blog-meta {
+    font-size: 9px !important;
+    padding-top: 8px !important;
+  }
+}
+.faq-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.faq-container {
+  max-width: 900px; /* Akkordeon o'rtada chiroyli ko'rinishi uchun ixcham kenglik */
+  margin: 0 auto;
+}
+
+/* Sarlavha qismi */
+.faq-header {
+  text-align: center;
+  margin-bottom: clamp(30px, 4vw, 50px);
+}
+
+.faq-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 30px);
+  color: #282739;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* Akkordeon elementlari */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eaebf0;
+  padding: clamp(16px, 2.5vw, 24px) 0;
+  transition: all 0.2s ease;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid #eaebf0;
+}
+
+/* Savol sarlavhasi (summary) */
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-weight: 600;
+  font-size: clamp(14px, 1.8vw, 17px);
+  color: #282739;
+  cursor: pointer;
+  list-style: none; /* Standart ko'rsatkichni berkitish */
+}
+
+.faq-question::-webkit-details-marker {
+  display: none; /* Safari uchun standart ko'rsatkichni berkitish */
+}
+
+/* Savol ochiq/yopiqligini bildiruvchi + / × plyus-krestik icon */
+.faq-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #282739;
+  border-radius: 2px;
+  transition: transform 0.2s ease;
+}
+
+/* Gorizontal chiziq */
+.faq-icon::before {
+  width: 16px;
+  height: 2px;
+}
+
+/* Vertikal chiziq */
+.faq-icon::after {
+  width: 2px;
+  height: 16px;
+}
+
+/* Akkordeon ochiq bo'lganda (open) plyus tugmasi 'X' (krestik) ga aylanadi */
+.faq-item[open] .faq-icon::after {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.faq-item[open] .faq-icon::before {
+  transform: rotate(45deg);
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* Javob matnlari */
+.faq-answer {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-answer p {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #5d6375;
+  line-height: 1.6;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 480px) {
+  .faq-question {
+    gap: 12px;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .faq-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .faq-title {
+    font-size: 14px !important;
+  }
+  .faq-item {
+    padding: 10px 0 !important;
+  }
+  .faq-question {
+    font-size: 11px !important;
+  }
+  .faq-answer p {
+    font-size: 10px !important;
+  }
+  .faq-icon {
+    width: 12px !important;
+    height: 12px !important;
+    min-width: 12px !important;
+  }
+  .faq-icon::before {
+    width: 12px !important;
+  }
+  .faq-icon::after {
+    height: 12px !important;
+  }
+}
+.footer {
+  width: 100%;
+  background-color: #f4f7fb;
+  padding: clamp(30px, 5vw, 60px) clamp(10px, 3vw, 30px) 30px;
+  color: #282739;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* 1. Obuna bloki */
+.subscribe-box {
+  background-color: #6f73ee;
+  border-radius: 16px;
+  padding: clamp(25px, 4vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.subscribe-title {
+  font-weight: 700;
+  font-size: clamp(16px, 2.2vw, 24px);
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  max-width: 500px;
+  min-width: 250px;
+  flex-wrap: wrap;
+}
+
+.subscribe-input {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 12px 18px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+.subscribe-input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.subscribe-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.subscribe-btn {
+  background-color: #ffffff;
+  color: #282739;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.subscribe-btn:hover {
+  background-color: #f4f5f9;
+}
+
+/* 2. Menyu va kontaktlar grid */
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 2.5fr;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.footer-col-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: #282739;
+  margin-bottom: 15px;
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-list li a,
+.footer-list-group li a {
+  color: #5d6375;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-list li a:hover,
+.footer-list-group li a:hover {
+  color: #6f73ee;
+}
+
+.footer-list-group {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.footer-list-group div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Kontaktlar ustuni */
+.contacts-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.call-back-link {
+  font-size: 13px;
+  color: #6f73ee;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.call-back-link:hover {
+  text-decoration: underline;
+}
+
+.contacts-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-label {
+  font-size: 12px;
+  color: #8f93a0;
+}
+
+.contact-phone {
+  font-weight: 700;
+  font-size: 15px;
+  color: #282739;
+  text-decoration: none;
+}
+
+.contact-phone-small {
+  font-weight: 600;
+  font-size: 13px;
+  color: #282739;
+  text-decoration: none;
+}
+
+.contact-time {
+  font-size: 11px;
+  color: #8f93a0;
+  margin-bottom: 6px;
+}
+
+.contact-address {
+  font-size: 12px;
+  color: #5d6375;
+  line-height: 1.4;
+}
+
+/* 3. Logo va Social row */
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e5e9f2;
+  border-bottom: 1px solid #e5e9f2;
+  padding: 30px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  font-weight: 700;
+  font-size: 26px;
+  color: #282739;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.app-links-box {
+  display: flex;
+  gap: 12px;
+}
+
+.app-badge {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  background-color: #e5e9f2;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.app-badge img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid #eaebf0;
+}
+
+.social-icon {
+  font-weight: 700;
+  font-size: 12px;
+  color: #6f73ee;
+}
+
+.social-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-text span {
+  font-weight: 600;
+  font-size: 12px;
+  color: #282739;
+}
+
+.social-text small {
+  font-size: 10px;
+  color: #8f93a0;
+}
+
+/* 4. Copyright va Payment row */
+.footer-copyright-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.copyright-links {
+  display: flex;
+  gap: 25px;
+}
+
+.copyright-links a {
+  font-size: 12px;
+  color: #8f93a0;
+  text-decoration: none;
+}
+
+.copyright-links a:hover {
+  text-decoration: underline;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pay-icon {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #ffffff;
+  border: 1px solid #eaebf0;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #5d6375;
+  text-decoration: none;
+}
+
+.online-chat-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #5d6375;
+}
+
+.chat-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-link {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 1024px) {
+  .footer-links-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contacts-col {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 768px) {
+  .footer-links-grid {
+    grid-template-columns: 1fr;
+  }
+  .contacts-col {
+    grid-column: span 1;
+  }
+  .contacts-info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer-bottom-row,
+  .footer-copyright-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .footer {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .subscribe-box {
+    padding: 12px 8px !important;
+    margin-bottom: 20px !important;
+  }
+  .subscribe-title {
+    font-size: 12px !important;
+  }
+  .subscribe-form {
+    flex-direction: column;
+    width: 100%;
+  }
+  .subscribe-input,
+  .subscribe-btn {
+    font-size: 11px !important;
+    padding: 8px !important;
+  }
+  .footer-col-title {
+    font-size: 13px !important;
+    margin-bottom: 8px !important;
+  }
+  .footer-list li a,
+  .footer-list-group li a,
+  .contact-address,
+  .contact-time,
+  .contact-label {
+    font-size: 10px !important;
+  }
+  .contact-phone {
+    font-size: 12px !important;
+  }
+  .footer-logo {
+    font-size: 18px !important;
+  }
+  .app-badge {
+    width: 90px !important;
+    height: 30px !important;
+  }
+  .social-item {
+    padding: 4px 8px !important;
+  }
+  .copyright-links a,
+  .online-chat-box {
+    font-size: 10px !important;
+  }
+}
+.repair-service-section {
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 60px) clamp(10px, 3vw, 30px);
+}
+
+.repair-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: #fca311; /* Sariq fon (rasmdagidek) */
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Chap tomon matn qismi */
+.repair-content {
+  flex: 1.2;
+  padding: clamp(30px, 5vw, 60px);
+  z-index: 2;
+}
+
+.repair-title {
+  font-weight: 700;
+  font-size: clamp(22px, 3.2vw, 36px);
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.repair-subtitle {
+  font-size: clamp(14px, 1.8vw, 18px);
+  color: #ffffff;
+  margin-bottom: 35px;
+  opacity: 0.95;
+}
+
+/* Afzalliklar qatori */
+.repair-features {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.repair-feature-item {
+  flex: 1;
+  min-width: 160px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.feature-text {
+  font-size: clamp(11px, 1.3vw, 13px);
+  color: #ffffff;
+  line-height: 1.35;
+}
+
+/* Tugma */
+.repair-btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #282739;
+  text-decoration: none;
+  padding: 12px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.repair-btn:hover {
+  background-color: #f4f5f9;
+  transform: translateY(-2px);
+}
+
+/* O'ng tomon rasm qismi */
+.repair-visual {
+  flex: 0.8;
+  height: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.repair-img {
+  width: 100%;
+  max-width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center right;
+     object-position: center right;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 992px) {
+  .repair-container {
+    flex-direction: column;
+  }
+  .repair-visual {
+    width: 100%;
+    min-height: 280px;
+  }
+  .repair-content {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 600px) {
+  .repair-features {
+    flex-direction: column;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .repair-service-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .repair-container {
+    border-radius: 10px;
+  }
+  .repair-content {
+    padding: 12px 8px !important;
+  }
+  .repair-title {
+    font-size: 14px !important;
+  }
+  .repair-subtitle {
+    font-size: 11px !important;
+    margin-bottom: 15px !important;
+  }
+  .repair-features {
+    gap: 8px !important;
+    margin-bottom: 20px !important;
+  }
+  .repair-feature-item {
+    padding: 8px !important;
+    min-width: 100% !important;
+  }
+  .feature-text {
+    font-size: 10px !important;
+  }
+  .repair-btn {
+    padding: 8px 16px !important;
+    font-size: 12px !important;
+  }
+  .repair-visual {
+    min-height: 180px !important;
+  }
+}
+.diagnostic-repair-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.diagnostic-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Sarlavha */
+.diagnostic-header {
+  text-align: center;
+  margin-bottom: clamp(30px, 5vw, 60px);
+}
+
+.diagnostic-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 32px);
+  color: #282739;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+/* 3 ustunli Grid layout */
+.diagnostic-content-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.diagnostic-column {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(30px, 4vw, 50px);
+}
+
+.left-col {
+  text-align: right;
+}
+
+.right-col {
+  text-align: left;
+}
+
+/* Elementlar uslubi */
+.diagnostic-item-title {
+  font-weight: 700;
+  font-size: clamp(14px, 1.7vw, 17px);
+  color: #282739;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.diagnostic-item-desc {
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #5d6375;
+  line-height: 1.5;
+}
+
+/* Markaziy dumaloq qism */
+.diagnostic-center-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-img-box {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f4f7fb;
+  border: 2px dashed #eaebf0; /* Dumaloq atrofdagi chiziq effekti uchun */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.circle-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Markaziy Play tugmasi */
+.circle-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.circle-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-icon {
+  color: #6f73ee;
+  font-size: 20px;
+  margin-left: 3px;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 1024px) {
+  .diagnostic-content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .left-col,
+  .right-col {
+    text-align: center;
+  }
+  .diagnostic-center-circle {
+    order: -1; /* Planshet va telefonlarda dumaloq rasm tepaga chiqadi */
+  }
+}
+@media (max-width: 480px) {
+  .circle-img-box {
+    width: 280px;
+    height: 280px;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .diagnostic-repair-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .diagnostic-title {
+    font-size: 14px !important;
+  }
+  .circle-img-box {
+    width: 180px !important;
+    height: 180px !important;
+  }
+  .circle-play-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .play-icon {
+    font-size: 12px !important;
+  }
+  .diagnostic-item-title {
+    font-size: 12px !important;
+  }
+  .diagnostic-item-desc {
+    font-size: 10px !important;
+  }
+  .diagnostic-column {
+    gap: 20px !important;
+  }
+}
+@media (max-width: 700px) {
+  .diagnostic-content-grid {
+    flex-direction: column;
+  }
+}
+.repair-price-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.repair-price-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Sarlavha qismi */
+.repair-price-header {
+  text-align: center;
+  margin-bottom: clamp(30px, 4vw, 50px);
+}
+
+.repair-price-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 32px);
+  color: #282739;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.repair-price-subtitle {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #5d6375;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Yuqori Tablar */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cat-tab-btn {
+  background-color: #f4f7fb;
+  border: 1.5px solid transparent;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-family: "Jost", sans-serif;
+  font-size: clamp(13px, 1.6vw, 15px);
+  font-weight: 500;
+  color: #5d6375;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cat-tab-btn.active {
+  border-color: #6f73ee;
+  background-color: #ffffff;
+  color: #6f73ee;
+}
+
+.cat-tab-btn:hover {
+  border-color: #6f73ee;
+}
+
+/* Asosiy Ishchi Maydon (Tab va Jadval) */
+.repair-price-body {
+  display: flex;
+  gap: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  align-items: stretch;
+}
+
+/* Chap tomondagi Modellarni tanlash */
+.model-tabs {
+  width: 280px;
+  min-width: 200px;
+  background-color: #f4f7fb;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.model-tab-btn {
+  background: transparent;
+  border: none;
+  border-left: 3px solid transparent;
+  padding: 16px 24px;
+  text-align: left;
+  font-family: "Jost", sans-serif;
+  font-size: clamp(13px, 1.6vw, 15px);
+  font-weight: 600;
+  color: #282739;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.model-tab-btn:hover {
+  color: #6f73ee;
+}
+
+.model-tab-btn.active {
+  background-color: #ffffff;
+  border-left-color: #6f73ee;
+  color: #6f73ee;
+}
+
+/* O'ng tomondagi Narxlar Jadvali */
+.price-table-wrapper {
+  flex: 1;
+  border: 1px solid #eaebf0;
+  border-radius: 12px;
+  padding: 10px 25px;
+  background-color: #ffffff;
+}
+
+.price-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #eaebf0;
+  gap: 15px;
+}
+
+.price-row:last-child {
+  border-bottom: none;
+}
+
+.service-name {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #282739;
+  font-weight: 500;
+}
+
+.service-price {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #282739;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 768px) {
+  .repair-price-body {
+    flex-direction: column;
+  }
+  .model-tabs {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .model-tab-btn {
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    padding: 12px 18px;
+  }
+  .model-tab-btn.active {
+    border-left-color: transparent;
+    border-bottom-color: #6f73ee;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .repair-price-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .repair-price-title {
+    font-size: 14px !important;
+  }
+  .repair-price-subtitle {
+    font-size: 10px !important;
+    margin-bottom: 15px !important;
+  }
+  .cat-tab-btn,
+  .model-tab-btn {
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+  }
+  .price-table-wrapper {
+    padding: 5px 10px !important;
+  }
+  .service-name,
+  .service-price {
+    font-size: 10px !important;
+  }
+  .price-row {
+    padding: 10px 0 !important;
+  }
+}
+.remote-diag-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 60px) clamp(10px, 3vw, 30px);
+}
+
+.remote-diag-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: #3b82f6; /* Rasmdagi kabi yorqin ko'k fon */
+  border-radius: 20px;
+  padding: clamp(30px, 5vw, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(30px, 4vw, 50px);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Chap tomon vizual mock-up */
+.remote-diag-visual {
+  flex: 1.1;
+  min-width: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoom-screen-mockup {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background-color: #1a1a24;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mockup-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Zoom nishoni (badge) */
+.zoom-badge {
+  position: absolute;
+  top: -30px;
+  right: -25px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  padding: 10px;
+}
+
+.zoom-badge img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/* O'ng tomon matn va tugmalar */
+.remote-diag-content {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #ffffff;
+}
+
+.service-tag {
+  display: inline-block;
+  background-color: #84cc16; /* Yashil mini teg */
+  color: #ffffff;
+  font-size: clamp(11px, 1.4vw, 13px);
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.remote-diag-title {
+  font-weight: 700;
+  font-size: clamp(22px, 3.4vw, 36px);
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.remote-diag-btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3b82f6;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 15px);
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.remote-diag-btn:hover {
+  background-color: #f4f7fb;
+  transform: translateY(-2px);
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 992px) {
+  .remote-diag-container {
+    flex-direction: column;
+  }
+  .remote-diag-visual,
+  .remote-diag-content {
+    width: 100%;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .remote-diag-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .remote-diag-container {
+    padding: 12px 8px !important;
+    border-radius: 10px;
+    gap: 20px !important;
+  }
+  .remote-diag-title {
+    font-size: 14px !important;
+    margin-bottom: 15px !important;
+  }
+  .service-tag {
+    font-size: 9px !important;
+    padding: 2px 8px !important;
+    margin-bottom: 10px !important;
+  }
+  .remote-diag-btn {
+    padding: 8px 14px !important;
+    font-size: 11px !important;
+    width: 100%;
+    text-align: center;
+  }
+  .zoom-badge {
+    width: 30px !important;
+    height: 30px !important;
+    top: -8px !important;
+    right: -8px !important;
+    padding: 5px !important;
+  }
+}
+@media (max-width: 320px) {
+  .remote-diag-visual {
+    display: none;
+  }
+}
+.hydro-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.hydro-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(30px, 5vw, 60px);
+  flex-wrap: wrap;
+}
+
+/* Chap tomon vizual qism */
+.hydro-visual {
+  flex: 1.2;
+  min-width: 280px;
+  position: relative;
+  aspect-ratio: 16/10;
+  background-color: #f4f7fb;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eaebf0;
+}
+
+.hydro-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hydro-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(50px, 7vw, 75px);
+  height: clamp(50px, 7vw, 75px);
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.hydro-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-icon {
+  color: #6f73ee;
+  font-size: clamp(16px, 2.2vw, 24px);
+  margin-left: 3px;
+}
+
+/* O'ng tomon matn qismi */
+.hydro-content {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hydro-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 30px);
+  color: #282739;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.hydro-subtitle {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #5d6375;
+  margin-bottom: 20px;
+}
+
+.hydro-desc {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #5d6375;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hydro-features-title {
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #282739;
+  margin-bottom: 12px;
+}
+
+.hydro-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.hydro-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #5d6375;
+  line-height: 1.4;
+}
+
+.check-icon {
+  color: #6f73ee;
+  font-weight: 700;
+  font-size: 14px;
+  min-width: 16px;
+}
+
+.hydro-footer-link-text {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: #8f93a0;
+}
+
+.hydro-link {
+  color: #6f73ee;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hydro-link:hover {
+  text-decoration: underline;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 992px) {
+  .hydro-container {
+    flex-direction: column;
+  }
+  .hydro-visual,
+  .hydro-content {
+    width: 100%;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .hydro-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .hydro-title {
+    font-size: 14px !important;
+  }
+  .hydro-subtitle,
+  .hydro-desc,
+  .hydro-features-title,
+  .hydro-features-list li,
+  .hydro-footer-link-text {
+    font-size: 10px !important;
+  }
+  .hydro-play-btn {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  .play-icon {
+    font-size: 12px !important;
+  }
+}
+.life-extension-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.life-extension-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(30px, 5vw, 60px);
+  flex-wrap: wrap;
+}
+
+/* Chap tomon matn qismi */
+.life-extension-content {
+  flex: 1.1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.life-extension-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 30px);
+  color: #282739;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.life-extension-subtitle {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #5d6375;
+  margin-bottom: 20px;
+}
+
+.life-extension-desc {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #5d6375;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.life-extension-features-title {
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #282739;
+  margin-bottom: 12px;
+}
+
+.life-extension-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.life-extension-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #5d6375;
+  line-height: 1.4;
+}
+
+.check-icon {
+  color: #6f73ee;
+  font-weight: 700;
+  font-size: 14px;
+  min-width: 16px;
+}
+
+.life-extension-footer-link-text {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: #8f93a0;
+}
+
+.life-extension-link {
+  color: #6f73ee;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.life-extension-link:hover {
+  text-decoration: underline;
+}
+
+/* O'ng tomon vizual qism */
+.life-extension-visual {
+  flex: 1;
+  min-width: 280px;
+  position: relative;
+  aspect-ratio: 4/3;
+  background-color: #f4f7fb;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eaebf0;
+}
+
+.life-extension-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 992px) {
+  .life-extension-container {
+    flex-direction: column;
+  }
+  .life-extension-content,
+  .life-extension-visual {
+    width: 100%;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .life-extension-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .life-extension-title {
+    font-size: 14px !important;
+  }
+  .life-extension-subtitle,
+  .life-extension-desc,
+  .life-extension-features-title,
+  .life-extension-features-list li,
+  .life-extension-footer-link-text {
+    font-size: 10px !important;
+  }
+  .life-extension-visual {
+    border-radius: 10px !important;
+  }
+}
+.hydro-price-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.hydro-price-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Sarlavha qismi */
+.hydro-price-header {
+  text-align: center;
+  margin-bottom: clamp(30px, 4vw, 45px);
+}
+
+.hydro-price-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 32px);
+  color: #282739;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.hydro-price-subtitle {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #5d6375;
+  margin-bottom: 25px;
+}
+
+/* Tablar */
+.hydro-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hydro-tab-btn {
+  background-color: #f4f7fb;
+  border: 1.5px solid transparent;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-family: "Jost", sans-serif;
+  font-size: clamp(13px, 1.6vw, 15px);
+  font-weight: 500;
+  color: #5d6375;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hydro-tab-btn.active {
+  border-color: #6f73ee;
+  background-color: #ffffff;
+  color: #6f73ee;
+  font-weight: 600;
+}
+
+.hydro-tab-btn:hover {
+  border-color: #6f73ee;
+}
+
+/* Jadval ko'rinishi (2 ustunli) */
+.hydro-price-grid-wrapper {
+  margin-bottom: 40px;
+}
+
+.hydro-price-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 50px;
+}
+
+.hydro-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.hydro-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #eaebf0;
+  gap: 15px;
+}
+
+.model-name {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #282739;
+  font-weight: 500;
+}
+
+.model-price {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #282739;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Tugma qismi */
+.hydro-action-box {
+  text-align: center;
+}
+
+.hydro-order-btn {
+  display: inline-block;
+  background-color: #6f73ee;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 36px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 15px);
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 15px rgba(111, 115, 238, 0.3);
+}
+
+.hydro-order-btn:hover {
+  background-color: #5b5fd8;
+  transform: translateY(-2px);
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 768px) {
+  .hydro-price-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .hydro-price-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .hydro-price-title {
+    font-size: 14px !important;
+  }
+  .hydro-price-subtitle {
+    font-size: 10px !important;
+    margin-bottom: 15px !important;
+  }
+  .hydro-tab-btn {
+    font-size: 10px !important;
+    padding: 6px 10px !important;
+  }
+  .model-name,
+  .model-price {
+    font-size: 10px !important;
+  }
+  .hydro-row {
+    padding: 10px 0 !important;
+  }
+  .hydro-order-btn {
+    padding: 10px 20px !important;
+    font-size: 11px !important;
+  }
+}
+.delivery-banner-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.delivery-banner-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: #f4f7fb;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(20px, 4vw, 50px);
+  overflow: hidden;
+  border: 1px solid #eaebf0;
+}
+
+/* Chap tomon matn qismi */
+.delivery-banner-content {
+  flex: 1.2;
+  padding: clamp(30px, 5vw, 60px);
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-banner-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 34px);
+  color: #282739;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.delivery-banner-subtitle {
+  font-size: clamp(12px, 1.6vw, 15px);
+  color: #5d6375;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.delivery-features-title {
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #282739;
+  margin-bottom: 14px;
+}
+
+/* Narxlar qatori */
+.delivery-prices-row {
+  display: flex;
+  gap: clamp(20px, 4vw, 40px);
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.delivery-price-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #5d6375;
+  font-weight: 500;
+}
+
+.check-icon {
+  color: #6f73ee;
+  font-weight: 700;
+  font-size: 14px;
+  min-width: 16px;
+}
+
+/* Tugma */
+.delivery-btn {
+  display: inline-block;
+  background-color: #6f73ee;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 15px);
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 15px rgba(111, 115, 238, 0.3);
+}
+
+.delivery-btn:hover {
+  background-color: #5b5fd8;
+  transform: translateY(-2px);
+}
+
+/* O'ng tomon vizual rasm qismi */
+.delivery-banner-visual {
+  flex: 1.1;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.delivery-img {
+  min-width: 550px;
+  min-height: 380px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 992px) {
+  .delivery-banner-container {
+    flex-direction: column;
+  }
+  .delivery-banner-visual {
+    width: 100%;
+    min-height: 260px;
+  }
+  .delivery-banner-content {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .delivery-prices-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .delivery-banner-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .delivery-banner-container {
+    border-radius: 10px;
+  }
+  .delivery-banner-content {
+    padding: 12px 8px !important;
+  }
+  .delivery-banner-title {
+    font-size: 14px !important;
+  }
+  .delivery-banner-subtitle,
+  .delivery-features-title,
+  .delivery-price-item {
+    font-size: 10px !important;
+  }
+  .delivery-prices-row {
+    margin-bottom: 15px !important;
+    gap: 6px !important;
+  }
+  .delivery-btn {
+    padding: 8px 16px !important;
+    font-size: 11px !important;
+    width: 100%;
+    text-align: center;
+  }
+  .delivery-banner-visual {
+    min-height: 160px !important;
+  }
+}
+.delivery-banner-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.delivery-banner-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: #f4f7fb;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(20px, 4vw, 50px);
+  overflow: hidden;
+  border: 1px solid #eaebf0;
+}
+
+/* Chap tomon matn qismi */
+.delivery-banner-content {
+  flex: 1.2;
+  padding: clamp(30px, 5vw, 60px);
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-banner-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 34px);
+  color: #282739;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.delivery-banner-subtitle {
+  font-size: clamp(12px, 1.6vw, 15px);
+  color: #5d6375;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.delivery-features-title {
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #282739;
+  margin-bottom: 14px;
+}
+
+/* Narxlar qatori */
+.delivery-prices-row {
+  display: flex;
+  gap: clamp(20px, 4vw, 40px);
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.delivery-price-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #5d6375;
+  font-weight: 500;
+}
+
+.check-icon {
+  color: #6f73ee;
+  font-weight: 700;
+  font-size: 14px;
+  min-width: 16px;
+}
+
+/* Tugma */
+.delivery-btn {
+  display: inline-block;
+  background-color: #6f73ee;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 15px);
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 15px rgba(111, 115, 238, 0.3);
+}
+
+.delivery-btn:hover {
+  background-color: #5b5fd8;
+  transform: translateY(-2px);
+}
+
+/* O'ng tomon vizual rasm qismi */
+.delivery-banner-visual {
+  flex: 1.1;
+  height: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.delivery-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 992px) {
+  .delivery-banner-container {
+    flex-direction: column;
+  }
+  .delivery-banner-visual {
+    width: 100%;
+    min-height: 260px;
+  }
+  .delivery-banner-content {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .delivery-prices-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .delivery-banner-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .delivery-banner-container {
+    border-radius: 10px;
+  }
+  .delivery-banner-content {
+    padding: 12px 8px !important;
+  }
+  .delivery-banner-title {
+    font-size: 14px !important;
+  }
+  .delivery-banner-subtitle,
+  .delivery-features-title,
+  .delivery-price-item {
+    font-size: 10px !important;
+  }
+  .delivery-prices-row {
+    margin-bottom: 15px !important;
+    gap: 6px !important;
+  }
+  .delivery-btn {
+    padding: 8px 16px !important;
+    font-size: 11px !important;
+    width: 100%;
+    text-align: center;
+  }
+  .delivery-banner-visual {
+    min-height: 160px !important;
+  }
+}
+.team-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.team-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Sarlavha */
+.team-header {
+  text-align: center;
+  margin-bottom: clamp(25px, 4vw, 40px);
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 32px);
+  color: #282739;
+  text-transform: uppercase;
+}
+
+/* Yuqori qismdagi 2 ta ma'lumot bloklari */
+.team-info-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 45px;
+}
+
+.info-box-item {
+  background-color: #ffffff;
+  border: 1px solid #eaebf0;
+  border-radius: 16px;
+  padding: clamp(20px, 3vw, 30px);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.info-box-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background-color: #f4f7fb;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-box-icon img {
+  width: 60%;
+  height: 60%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.info-box-text {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #5d6375;
+  line-height: 1.5;
+}
+
+/* Jamoa a'zolari uchun Grid va Slider */
+.team-slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  width: 100%;
+}
+
+.team-card {
+  background-color: #ffffff;
+  border: 1px solid #eaebf0;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+}
+
+.team-img-box {
+  width: 100%;
+  height: 310px;
+  background-color: #f4f7fb;
+}
+
+.team-img {
+  max-width: 1000px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.team-member-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.member-name {
+  font-weight: 700;
+  font-size: clamp(14px, 1.7vw, 17px);
+  color: #282739;
+}
+
+.member-role {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: #8f93a0;
+  line-height: 1.4;
+}
+
+/* Slider strelka tugmasi */
+.team-next-btn {
+  position: absolute;
+  left: 950px;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  background-color: #6f73ee;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(111, 115, 238, 0.35);
+  z-index: 3;
+  transition: background-color 0.2s;
+}
+
+.team-next-btn:hover {
+  background-color: #5b5fd8;
+}
+
+.next-arrow {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 1024px) {
+  .team-info-boxes {
+    grid-template-columns: 1fr;
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-next-btn {
+    display: none;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .team-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .team-title {
+    font-size: 14px !important;
+  }
+  .info-box-item {
+    padding: 10px !important;
+    gap: 10px !important;
+  }
+  .info-box-text,
+  .member-role {
+    font-size: 10px !important;
+  }
+  .team-img-box {
+    height: 180px !important;
+  }
+  .team-member-info {
+    padding: 10px !important;
+  }
+  .member-name {
+    font-size: 12px !important;
+  }
+}
+.work-process-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.work-process-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Header qismi */
+.work-process-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(25px, 4vw, 40px);
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.work-process-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 32px);
+  color: #282739;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+/* O'ng tarafdagi binafsha/ko'k rangli statistika bloki */
+.work-stat-badge {
+  background-color: #6f73ee;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 15px rgba(111, 115, 238, 0.25);
+}
+
+.badge-icon-box {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-text-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-subtitle {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.badge-number {
+  font-weight: 700;
+  font-size: clamp(14px, 1.8vw, 17px);
+  line-height: 1.2;
+}
+
+.badge-desc {
+  font-size: 10px;
+  opacity: 0.85;
+}
+
+/* Galereya Grid tizimi (3 ta ustun) */
+.work-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.process-card {
+  background-color: #f4f7fb;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.process-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.process-img1 {
+  width: 100%;
+  height: 420px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.process-img2 {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 992px) {
+  .work-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .process-card {
+    height: 220px;
+  }
+}
+@media (max-width: 576px) {
+  .work-process-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .work-process-grid {
+    grid-template-columns: 1fr;
+  }
+  .process-card {
+    height: 200px;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .work-process-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .work-process-title {
+    font-size: 14px !important;
+  }
+  .work-stat-badge {
+    padding: 8px 10px !important;
+    width: 100%;
+  }
+  .badge-number {
+    font-size: 12px !important;
+  }
+  .process-card {
+    height: 140px !important;
+    border-radius: 10px !important;
+  }
+}
+.extended-faq-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.extended-faq-container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* Sarlavha qismi */
+.extended-faq-header {
+  text-align: center;
+  margin-bottom: clamp(30px, 4vw, 50px);
+}
+
+.extended-faq-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 30px);
+  color: #282739;
+  text-transform: uppercase;
+}
+
+/* Akkordeon elementlari */
+.extended-faq-accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eaebf0;
+  padding: clamp(16px, 2.2vw, 22px) 0;
+  transition: all 0.2s ease;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid #eaebf0;
+}
+
+/* Savol sarlavhasi (summary) */
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-weight: 600;
+  font-size: clamp(13px, 1.7vw, 16px);
+  color: #282739;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+/* Plyus/Krestik icon */
+.faq-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #282739;
+  border-radius: 2px;
+  transition: transform 0.2s ease;
+}
+
+.faq-icon::before {
+  width: 16px;
+  height: 2px;
+}
+
+.faq-icon::after {
+  width: 2px;
+  height: 16px;
+}
+
+.faq-item[open] .faq-icon::after {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.faq-item[open] .faq-icon::before {
+  transform: rotate(45deg);
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* Javob matnlari */
+.faq-answer {
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-answer p {
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #5d6375;
+  line-height: 1.6;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 480px) {
+  .faq-question {
+    gap: 12px;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .extended-faq-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .extended-faq-title {
+    font-size: 14px !important;
+  }
+  .faq-item {
+    padding: 10px 0 !important;
+  }
+  .faq-question {
+    font-size: 11px !important;
+  }
+  .faq-answer p {
+    font-size: 10px !important;
+  }
+  .faq-icon {
+    width: 12px !important;
+    height: 12px !important;
+    min-width: 12px !important;
+  }
+  .faq-icon::before {
+    width: 12px !important;
+  }
+  .faq-icon::after {
+    height: 12px !important;
+  }
+}
+.service-addresses-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.service-addresses-wrapper {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* Sarlavha */
+.service-addresses-header {
+  text-align: center;
+  margin-bottom: clamp(25px, 4vw, 40px);
+}
+
+.service-addresses-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 32px);
+  color: #282739;
+  text-transform: uppercase;
+}
+
+/* Katta kulrang/och-ko'k fonli karta */
+.service-addresses-card {
+  background-color: #f4f7fb;
+  border-radius: 20px;
+  padding: clamp(30px, 5vw, 50px);
+  border: 1px solid #eaebf0;
+}
+
+/* 3 ustunli layout */
+.addresses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 4vw, 40px);
+}
+
+.address-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-title {
+  font-weight: 700;
+  font-size: clamp(16px, 2vw, 20px);
+  color: #282739;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+/* Qatorlar uslubi */
+.address-info-row,
+.phone-info-row,
+.note-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.info-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.street-address {
+  font-weight: 600;
+  font-size: clamp(13px, 1.5vw, 15px);
+  color: #282739;
+}
+
+.working-hours {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: #8f93a0;
+}
+
+.map-link {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: #6f73ee;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+}
+
+.phone-number {
+  font-weight: 700;
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: #282739;
+  text-decoration: none;
+}
+
+.phone-number:hover {
+  color: #6f73ee;
+}
+
+.note-info-row {
+  margin-top: 5px;
+}
+
+.note-text {
+  font-size: clamp(10px, 1.3vw, 12px);
+  color: #5d6375;
+  line-height: 1.4;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+@media (max-width: 992px) {
+  .addresses-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .service-addresses-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+  .service-addresses-card {
+    padding: 12px 8px !important;
+    border-radius: 10px;
+  }
+  .service-addresses-title {
+    font-size: 14px !important;
+  }
+  .city-title {
+    font-size: 13px !important;
+    margin-bottom: 12px !important;
+  }
+  .street-address,
+  .phone-number {
+    font-size: 11px !important;
+  }
+  .working-hours,
+  .map-link,
+  .note-text {
+    font-size: 9px !important;
+  }
+  .address-info-row,
+  .phone-info-row,
+  .note-info-row {
+    margin-bottom: 10px !important;
+    gap: 6px !important;
+  }
+  .info-icon {
+    width: 14px !important;
+    height: 14px !important;
+    min-width: 14px !important;
+  }
+}/*# sourceMappingURL=kugoo.css.map */

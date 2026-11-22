@@ -1,0 +1,193 @@
+.diagnostic-repair-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.diagnostic-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Sarlavha */
+.diagnostic-header {
+  text-align: center;
+  margin-bottom: clamp(30px, 5vw, 60px);
+}
+
+.diagnostic-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 32px);
+  color: #282739;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+/* 3 ustunli Grid layout */
+.diagnostic-content-grid {
+  display: flex;
+justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.diagnostic-column {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(30px, 4vw, 50px);
+}
+
+.left-col {
+  text-align: right;
+}
+
+.right-col {
+  text-align: left;
+}
+
+/* Elementlar uslubi */
+.diagnostic-item-title {
+  font-weight: 700;
+  font-size: clamp(14px, 1.7vw, 17px);
+  color: #282739;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.diagnostic-item-desc {
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #5d6375;
+  line-height: 1.5;
+}
+
+/* Markaziy dumaloq qism */
+.diagnostic-center-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-img-box {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f4f7fb;
+  border: 2px dashed #eaebf0; /* Dumaloq atrofdagi chiziq effekti uchun */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.circle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Markaziy Play tugmasi */
+.circle-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.circle-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-icon {
+  color: #6f73ee;
+  font-size: 20px;
+  margin-left: 3px;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+
+@media (max-width: 1024px) {
+  .diagnostic-content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .left-col,
+  .right-col {
+    text-align: center;
+  }
+
+  .diagnostic-center-circle {
+    order: -1; /* Planshet va telefonlarda dumaloq rasm tepaga chiqadi */
+  }
+}
+
+@media (max-width: 480px) {
+  .circle-img-box {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .diagnostic-repair-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+
+  .diagnostic-title {
+    font-size: 14px !important;
+  }
+
+  .circle-img-box {
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  .circle-play-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .play-icon {
+    font-size: 12px !important;
+  }
+
+  .diagnostic-item-title {
+    font-size: 12px !important;
+  }
+
+  .diagnostic-item-desc {
+    font-size: 10px !important;
+  }
+
+  .diagnostic-column {
+    gap: 20px !important;
+  }
+}
+@media(max-width:700px){
+    .diagnostic-content-grid{
+        flex-direction:column;
+    }
+}

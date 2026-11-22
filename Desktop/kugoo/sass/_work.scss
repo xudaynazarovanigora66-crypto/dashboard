@@ -1,0 +1,162 @@
+.work-process-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.work-process-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Header qismi */
+.work-process-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(25px, 4vw, 40px);
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.work-process-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 32px);
+  color: #282739;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+/* O'ng tarafdagi binafsha/ko'k rangli statistika bloki */
+.work-stat-badge {
+  background-color: #6f73ee;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 15px rgba(111, 115, 238, 0.25);
+}
+
+.badge-icon-box {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-text-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-subtitle {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.badge-number {
+  font-weight: 700;
+  font-size: clamp(14px, 1.8vw, 17px);
+  line-height: 1.2;
+}
+
+.badge-desc {
+  font-size: 10px;
+  opacity: 0.85;
+}
+
+/* Galereya Grid tizimi (3 ta ustun) */
+.work-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.process-card {
+  background-color: #f4f7fb;
+  border-radius: 16px;
+  overflow: hidden;
+
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.process-img {
+  width: 100%;
+
+  object-fit: cover;
+}
+.process-img1 {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+.process-img2 {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+
+@media (max-width: 992px) {
+  .work-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .process-card {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .work-process-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .work-process-grid {
+    grid-template-columns: 1fr;
+  }
+  .process-card {
+    height: 200px;
+  }
+}
+
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .work-process-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+
+  .work-process-title {
+    font-size: 14px !important;
+  }
+
+  .work-stat-badge {
+    padding: 8px 10px !important;
+    width: 100%;
+  }
+
+  .badge-number {
+    font-size: 12px !important;
+  }
+
+  .process-card {
+    height: 140px !important;
+    border-radius: 10px !important;
+  }
+}

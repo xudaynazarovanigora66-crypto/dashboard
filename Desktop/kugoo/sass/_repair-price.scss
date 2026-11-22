@@ -1,0 +1,215 @@
+.repair-price-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.repair-price-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Sarlavha qismi */
+.repair-price-header {
+  text-align: center;
+  margin-bottom: clamp(30px, 4vw, 50px);
+}
+
+.repair-price-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3.2vw, 32px);
+  color: #282739;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.repair-price-subtitle {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #5d6375;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Yuqori Tablar */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cat-tab-btn {
+  background-color: #f4f7fb;
+  border: 1.5px solid transparent;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(13px, 1.6vw, 15px);
+  font-weight: 500;
+  color: #5d6375;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cat-tab-btn.active {
+  border-color: #6f73ee;
+  background-color: #ffffff;
+  color: #6f73ee;
+}
+
+.cat-tab-btn:hover {
+  border-color: #6f73ee;
+}
+
+/* Asosiy Ishchi Maydon (Tab va Jadval) */
+.repair-price-body {
+  display: flex;
+  gap: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  align-items: stretch;
+}
+
+/* Chap tomondagi Modellarni tanlash */
+.model-tabs {
+  width: 280px;
+  min-width: 200px;
+  background-color: #f4f7fb;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.model-tab-btn {
+  background: transparent;
+  border: none;
+  border-left: 3px solid transparent;
+  padding: 16px 24px;
+  text-align: left;
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(13px, 1.6vw, 15px);
+  font-weight: 600;
+  color: #282739;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.model-tab-btn:hover {
+  color: #6f73ee;
+}
+
+.model-tab-btn.active {
+  background-color: #ffffff;
+  border-left-color: #6f73ee;
+  color: #6f73ee;
+}
+
+/* O'ng tomondagi Narxlar Jadvali */
+.price-table-wrapper {
+  flex: 1;
+  border: 1px solid #eaebf0;
+  border-radius: 12px;
+  padding: 10px 25px;
+  background-color: #ffffff;
+}
+
+.price-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #eaebf0;
+  gap: 15px;
+}
+
+.price-row:last-child {
+  border-bottom: none;
+}
+
+.service-name {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #282739;
+  font-weight: 500;
+}
+
+.service-price {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #282739;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+
+@media (max-width: 768px) {
+  .repair-price-body {
+    flex-direction: column;
+  }
+
+  .model-tabs {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .model-tab-btn {
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    padding: 12px 18px;
+  }
+
+  .model-tab-btn.active {
+    border-left-color: transparent;
+    border-bottom-color: #6f73ee;
+  }
+}
+
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .repair-price-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+
+  .repair-price-title {
+    font-size: 14px !important;
+  }
+
+  .repair-price-subtitle {
+    font-size: 10px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .cat-tab-btn,
+  .model-tab-btn {
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+  }
+
+  .price-table-wrapper {
+    padding: 5px 10px !important;
+  }
+
+  .service-name,
+  .service-price {
+    font-size: 10px !important;
+  }
+
+  .price-row {
+    padding: 10px 0 !important;
+  }
+}

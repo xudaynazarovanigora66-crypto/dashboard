@@ -1,0 +1,155 @@
+.life-extension-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: clamp(30px, 5vw, 70px) clamp(10px, 3vw, 30px);
+}
+
+.life-extension-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(30px, 5vw, 60px);
+  flex-wrap: wrap;
+}
+
+/* Chap tomon matn qismi */
+.life-extension-content {
+  flex: 1.1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.life-extension-title {
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 30px);
+  color: #282739;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.life-extension-subtitle {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #5d6375;
+  margin-bottom: 20px;
+}
+
+.life-extension-desc {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #5d6375;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.life-extension-features-title {
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #282739;
+  margin-bottom: 12px;
+}
+
+.life-extension-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.life-extension-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #5d6375;
+  line-height: 1.4;
+}
+
+.check-icon {
+  color: #6f73ee;
+  font-weight: 700;
+  font-size: 14px;
+  min-width: 16px;
+}
+
+.life-extension-footer-link-text {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: #8f93a0;
+}
+
+.life-extension-link {
+  color: #6f73ee;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.life-extension-link:hover {
+  text-decoration: underline;
+}
+
+/* O'ng tomon vizual qism */
+.life-extension-visual {
+  flex: 1;
+  min-width: 280px;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background-color: #f4f7fb;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eaebf0;
+}
+
+.life-extension-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========================================== */
+/* RESPONSIVE (Planshet, Mobil va 200px gacha) */
+/* ========================================== */
+
+@media (max-width: 992px) {
+  .life-extension-container {
+    flex-direction: column;
+  }
+  .life-extension-content,
+  .life-extension-visual {
+    width: 100%;
+  }
+}
+
+/* 200px va undan o'ta kichik ekranlar uchun */
+@media (max-width: 250px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .life-extension-section {
+    padding: 10px 4px !important;
+    overflow: hidden;
+  }
+
+  .life-extension-title {
+    font-size: 14px !important;
+  }
+
+  .life-extension-subtitle,
+  .life-extension-desc,
+  .life-extension-features-title,
+  .life-extension-features-list li,
+  .life-extension-footer-link-text {
+    font-size: 10px !important;
+  }
+
+  .life-extension-visual {
+    border-radius: 10px !important;
+  }
+}

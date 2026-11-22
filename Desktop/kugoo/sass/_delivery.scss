@@ -1,0 +1,58 @@
+.dv-div{
+    background: radial-gradient(76.7% 707.77% at 23.3% 72.57%, #595959 0%, #3B3E46 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+border-radius: 10px;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+padding: 50px;
+}
+.dv-section{
+    display: flex;
+    justify-content: center;
+}
+.dv-btn{
+    font-family: Jost;
+font-weight: 400;
+font-size: 14px;
+color: #FFFFFF;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+border: 1px solid #EE685F;
+background: #EE685F;
+border-radius: 5px;
+padding: 10px 20px;
+margin-bottom: 27px;
+}
+.dv-h2{
+    font-family: Jost;
+font-weight: 600;
+font-size: 35px;
+color: #FFFFFF;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: uppercase;
+margin-bottom: 27px;
+}
+.dv-btn1{
+    font-family: Jost;
+font-weight: 400;
+font-size: 16px;
+background: Black;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+border-radius: 5px;
+background: #FFFFFF;
+border: none;
+padding: 20px 30px;
+}
+.dv-img{
+    width: 100%;
+    max-width: 800px;
+}
+@media(max-width:500px){
+.dv-section{
+    display:none;
+}
+}
