@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Til sinovi: ingliz tili, IT, rus tili va o‘zbek tili testlarini tanlang."
+    />
+    <meta name="theme-color" content="#faf8ff" />
+    <title>Bosh sahifa — Til sinovi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="experience.js" defer></script>
+    <script src="home.js" defer></script>
+  </head>
+  <body>
+    <div class="page home-page">
+      <header class="home-header">
+        <a class="brand" href="home.html" aria-label="Bosh sahifa">
+          <span class="brand__mark" aria-hidden="true">✦</span>
+          <span>til <span class="brand__accent">sinovi!</span></span>
+        </a>
+
+        <nav class="home-nav" aria-label="Asosiy menyu">
+          <a href="#tests">Testlar</a>
+          <a href="#experience-progress">EXP haqida</a>
+        </nav>
+
+        <div class="home-header__actions">
+          <section class="home-exp" id="experience-progress" aria-label="Tajriba va daraja">
+            <div class="home-exp__heading">
+              <span class="home-exp__spark" aria-hidden="true">✦</span>
+              <span>SENING RIVOJLANISHING</span>
+            </div>
+            <div class="home-exp__stats">
+              <span class="home-exp__item"><strong id="exp-total">0</strong><span>EXP</span></span>
+              <span class="home-exp__divider" aria-hidden="true"></span>
+              <span class="home-exp__level">DARAJA <strong id="exp-level">1</strong></span>
+            </div>
+            <div
+              class="home-exp__progress"
+              id="exp-progress"
+              role="progressbar"
+              aria-label="Keyingi darajagacha tajriba"
+              aria-valuemin="0"
+              aria-valuemax="5"
+              aria-valuenow="0"
+            >
+              <span id="exp-progress-fill"></span>
+            </div>
+            <span class="home-exp__next" id="exp-next">Keyingi darajagacha 5 EXP</span>
+          </section>
+          <a class="home-login-button" href="login.html">Log in</a>
+        </div>
+      </header>
+
+      <main class="home-main">
+        <section class="home-hero" aria-labelledby="home-title">
+          <div class="home-hero__copy">
+            <p class="eyebrow"><span class="eyebrow__dot"></span> BILIMINGNI SINAB KO‘R</p>
+            <h1 id="home-title">O‘rganish<br />endi <span>qiziqarli!</span></h1>
+            <p class="home-hero__description">
+              O‘zingga yoqqan testni tanla, yangi narsalar o‘rgan va har bir yakunlangan test uchun
+              <strong>+1 EXP</strong> ol.
+            </p>
+            <div class="home-hero__actions">
+              <a class="home-hero__cta" href="#tests">Testni tanlash <span aria-hidden="true">→</span></a>
+              <span class="home-hero__caption">Kichik qadamlar — katta natijalar</span>
+            </div>
+          </div>
+
+          <div class="home-hero__visual" aria-hidden="true">
+            <div class="home-hero__orbit home-hero__orbit--outer"></div>
+            <div class="home-hero__orbit home-hero__orbit--inner"></div>
+            <div class="home-hero__mascot">🧠</div>
+            <div class="home-hero__float home-hero__float--left">
+              <span class="home-hero__float-icon">✨</span>
+              <span><strong>+1 EXP</strong><small>Har yakunlangan test</small></span>
+            </div>
+            <div class="home-hero__float home-hero__float--right">
+              <span class="home-hero__float-icon">🎯</span>
+              <span><strong>4 ta yo‘nalish</strong><small>Tanlov o‘zingda</small></span>
+            </div>
+            <span class="home-hero__spark home-hero__spark--one">✦</span>
+            <span class="home-hero__spark home-hero__spark--two">✧</span>
+          </div>
+        </section>
+
+        <section class="home-tests" id="tests" aria-labelledby="tests-title">
+          <div class="home-tests__heading">
+            <div>
+              <p class="question-kicker">BUGUN NIMANI O‘RGANAMIZ?</p>
+              <h2 id="tests-title">O‘z yo‘nalishingni tanla</h2>
+            </div>
+            <span class="home-tests__count"><span aria-hidden="true">✦</span> 4 ta qiziqarli test</span>
+          </div>
+
+          <div class="home-test-grid">
+            <article class="home-test-card home-test-card--english">
+              <div class="home-test-card__top">
+                <span class="home-test-card__icon" aria-hidden="true">🌍</span>
+                <span class="home-test-card__duration">20 SAVOL</span>
+              </div>
+              <p class="home-test-card__tag">TIL TESTI</p>
+              <h3>Ingliz tili</h3>
+              <p>Yangi so‘zlar, kundalik iboralar va grammatikani mashq qil.</p>
+              <a class="home-test-card__button" href="../index.html">English test <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="home-test-card home-test-card--it">
+              <div class="home-test-card__top">
+                <span class="home-test-card__icon" aria-hidden="true">💻</span>
+                <span class="home-test-card__duration">20 SAVOL</span>
+              </div>
+              <p class="home-test-card__tag">TEXNOLOGIYA</p>
+              <h3>IT bilimlari</h3>
+              <p>Internet, raqamli xavfsizlik va sun’iy intellektni kashf et.</p>
+              <a class="home-test-card__button" href="it-test.html">IT test <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="home-test-card home-test-card--russian">
+              <div class="home-test-card__top">
+                <span class="home-test-card__icon" aria-hidden="true">🇷🇺</span>
+                <span class="home-test-card__duration">20 SAVOL</span>
+              </div>
+              <p class="home-test-card__tag">TIL TESTI</p>
+              <h3>Rus tili</h3>
+              <p>Ruscha kundalik so‘zlar va gaplarni bemalol mashq qil.</p>
+              <a class="home-test-card__button" href="language-test.html?lang=ru">Russian test <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="home-test-card home-test-card--uzbek">
+              <div class="home-test-card__top">
+                <span class="home-test-card__icon" aria-hidden="true">🇺🇿</span>
+                <span class="home-test-card__duration">20 SAVOL</span>
+              </div>
+              <p class="home-test-card__tag">TIL TESTI</p>
+              <h3>O‘zbek tili</h3>
+              <p>Imlo, so‘z boyligi va ona tili bilimlaringni mustahkamla.</p>
+              <a class="home-test-card__button" href="language-test.html?lang=uz">Uzbek test <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </section>
+
+        <section class="home-exp-note" aria-label="Tajriba haqida">
+          <span class="home-exp-note__icon" aria-hidden="true">✨</span>
+          <div>
+            <strong>Harakat qilganing uchun mukofot!</strong>
+            <p>
+              Har bir testni yakunlasang, natijangdan qat’i nazar <b>+1 EXP</b> olasan.
+              Har 5 EXP da darajang bittaga ko‘tariladi!
+            </p>
+          </div>
+          <span class="home-exp-note__level" aria-hidden="true">LVL UP ↑</span>
+        </section>
+      </main>
+
+      <footer class="home-footer">
+        <a class="brand brand--small" href="home.html">til <span class="brand__accent">sinovi!</span></a>
+        <span>O‘rganish — har kuni yangi imkoniyat <span aria-hidden="true">💜</span></span>
+        <span>© 2026 Til sinovi</span>
+      </footer>
+    </div>
+  </body>
+</html>

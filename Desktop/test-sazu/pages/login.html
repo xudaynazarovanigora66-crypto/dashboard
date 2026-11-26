@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#faf8ff" />
+    <title>Login — Til sinovi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="auth-demo.js" defer></script>
+  </head>
+  <body>
+    <div class="page auth-page">
+      <header class="topbar">
+        <a class="brand" href="home.html" aria-label="Bosh sahifa">
+          <span class="brand__mark" aria-hidden="true">✦</span>
+          <span>til <span class="brand__accent">sinovi!</span></span>
+        </a>
+        <a class="topbar__tag auth-home-link" href="home.html">← Bosh sahifa</a>
+      </header>
+
+      <main class="auth-main">
+        <section class="auth-card" aria-labelledby="login-title">
+          <div class="auth-card__icon" aria-hidden="true">👋</div>
+          <p class="eyebrow"><span class="eyebrow__dot"></span> XUSH KELIBSAN!</p>
+          <h1 id="login-title">Login</h1>
+          <p class="auth-card__description">Hisobingizga kirish uchun ma’lumotlarni kiriting.</p>
+
+          <form id="login-form" data-auth-form="login">
+            <label class="auth-field">
+              <span>Email</span>
+              <input name="email" type="email" autocomplete="email" placeholder="name@example.com" required />
+            </label>
+            <label class="auth-field">
+              <span>Parol</span>
+              <input
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                minlength="8"
+                placeholder="Kamida 8 ta belgi"
+                required
+              />
+            </label>
+            <button class="next-button auth-submit" type="submit">Sign in</button>
+          </form>
+
+          <p class="auth-message" id="auth-message" role="status" aria-live="polite"></p>
+          <p class="auth-switch">
+            Hisobingiz yo‘qmi?
+            <a href="signup.html">Create account</a>
+          </p>
+          <p class="auth-demo-note">
+            Bu hozircha demo sahifa. Backend ulanmagan; parolingiz tekshirilmaydi va saqlanmaydi.
+          </p>
+        </section>
+      </main>
+
+      <footer class="home-footer auth-footer">
+        <a class="brand brand--small" href="home.html">til <span class="brand__accent">sinovi!</span></a>
+        <span>© 2026 Til sinovi</span>
+      </footer>
+    </div>
+  </body>
+</html>

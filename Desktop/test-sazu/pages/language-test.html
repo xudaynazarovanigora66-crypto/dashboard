@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#faf8ff" />
+    <title>Til testi — Til sinovi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="experience.js" defer></script>
+    <script src="question-utils.js" defer></script>
+    <script src="language-test.js" defer></script>
+  </head>
+  <body>
+    <div class="page it-page">
+      <header class="topbar">
+        <a class="brand" href="home.html" aria-label="Bosh sahifaga qaytish">
+          <span class="brand__mark" aria-hidden="true">✦</span>
+          <span>til <span class="brand__accent">sinovi!</span></span>
+        </a>
+        <a class="topbar__tag it-home-link" href="home.html">← Bosh sahifa</a>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <div class="intro__copy">
+            <p class="eyebrow"><span class="eyebrow__dot"></span> BILIMINGNI SINAB KO‘R</p>
+            <h1 id="page-title"><span id="language-name">Tilni</span><br /><span>sinab ko‘r!</span></h1>
+            <p class="intro__description">
+              Har safar 30 ta savoldan yangi 20 tasi tanlanadi: boshida oson, keyin asta-sekin
+              qiyinroq. Har to‘g‘ri javobga <strong>+5 IQ</strong> va yakunda <strong>+1 EXP</strong>!
+            </p>
+          </div>
+          <div class="mascot it-mascot" aria-hidden="true">
+            <span class="mascot__spark mascot__spark--one">✦</span>
+            <span class="mascot__face" id="language-emoji">📚</span>
+            <span class="mascot__spark mascot__spark--two">✦</span>
+            <span class="mascot__bubble">Omad!</span>
+          </div>
+        </section>
+
+        <section class="it-quiz-layout" aria-label="Til testi">
+          <div class="quiz-card it-quiz-card" id="quiz-card">
+            <div class="quiz-card__top">
+              <div class="quiz-label"><span aria-hidden="true">📖</span> <span id="language-label">TIL TESTI</span></div>
+              <span class="quiz-level" id="quiz-level">SO‘ZLAR</span>
+              <div class="question-counter" id="question-counter">01 <span>/ 20</span></div>
+            </div>
+
+            <div
+              class="progress"
+              id="progress"
+              role="progressbar"
+              aria-label="Test bajarilishi"
+              aria-valuemin="0"
+              aria-valuemax="20"
+              aria-valuenow="0"
+            >
+              <div class="progress__fill" id="progress-fill"></div>
+            </div>
+
+            <div class="question-area" aria-live="polite">
+              <p class="question-kicker" id="question-kicker">SAVOL 01</p>
+              <h2 class="question" id="question-text"></h2>
+              <p class="question-hint">To‘g‘ri javobni tanla 👇</p>
+              <div class="answers" id="answers" role="group" aria-label="A, B, C va D javob variantlari"></div>
+            </div>
+
+            <div class="quiz-card__bottom">
+              <p class="feedback" id="feedback" aria-live="polite">Javob variantini tanla!</p>
+              <button class="next-button" id="next-button" type="button" disabled>
+                Next question <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+
+          <aside class="score-card" aria-label="Test natijalari">
+            <div class="score-card__icon" aria-hidden="true">⚡</div>
+            <p class="score-card__label">YIG‘ILGAN IQ</p>
+            <p class="score-card__score"><span id="score">—</span><span class="score-card__max">/100</span></p>
+            <div class="score-card__divider"></div>
+            <div class="score-card__stat">
+              <span class="score-card__stat-icon" aria-hidden="true">🔥</span>
+              <span>Ketma-ket to‘g‘ri javoblar</span>
+              <strong id="streak">—</strong>
+            </div>
+            <div class="score-card__note">
+              <span aria-hidden="true">✨</span>
+              <span>Testni yakunla va +1 EXP ol!</span>
+            </div>
+          </aside>
+        </section>
+
+        <footer class="page-footer">
+          <span>Har bir savol — yangi bilim! <span aria-hidden="true">💜</span></span>
+          <span>20 savol <i></i> 100 IQ gacha</span>
+        </footer>
+      </main>
+    </div>
+    <div class="confetti" id="confetti" aria-hidden="true"></div>
+  </body>
+</html>
